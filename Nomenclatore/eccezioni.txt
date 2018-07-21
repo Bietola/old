@@ -1,0 +1,18 @@
+				LISTA DELLE ECCEZIONI DI NOMENCLATURA
+				      *istruzioni per l'uso*
+
+se si vuole aggiungere una nuova eccezione alla lista, procedere come descritto sotto.
+
+formula_composto,nome_composto,tipo_composto
+
+il programma userà il nome e il tipo legati alla formula di un'eccezione prima di applicare le regole ufficiali di nomenclatura.
+-------------------------------------------------------------------------------------------------------------------------------:
+ClO2,diossido di cloro,ossido basico
+CO,ossido di carbonio,ossido basico
+N2O,protossido di azoto,ossido basico
+NO,ossido di azoto,ossido basico
+NO2,ipoazotide,ossido acido
+N2O5,anidride nitrica,ossido acido
+CrO3,anidride cromica,ossido acido
+MnO3,anidride manganica,ossido acido
+Mn2O7,anidride permanganica,ossido acido

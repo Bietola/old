@@ -1,0 +1,6 @@
+{includes from "question"}
+ESSENCE		BONUSES
+-------------------------------------------------------:
+CRAZYNESS	[ PHILOSOPHY +50 HYSTORY +100 MATH -50 ]
+
+END

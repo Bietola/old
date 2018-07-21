@@ -1,0 +1,12 @@
+ID		NAME		GRA	FCLR	BCLR	MOVE_T	ESSENCE	RARITY	SPAWNLV	HP	MAN	ATT	DEF	LCK	AGI	VIS	MV1	MV2	MV3	MV4
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------:
+guy		guy		@	WHITE	BLACK	USER	ADV	0	0	100	100	20	10	20	20	6 6	punch	NO	NO	NO
+[The guy that's average... average in attack, average in health, average in defence, etc, etc.]
+
+adventurer	adventurer	@	WHITE	BLACK	USER	ADV	0	0	50	100	20	5	20	50	5 5	punch	learn	NO	NO
+[Low HP and DEF and an average ATT, but very high AGI and DOD! Can grow stronger against one specific type of enemy by learning its weak points.]
+
+squadra		squadra		s	CYAN	BLACK	DUMMY	NORMAL	0	0	25	10	7	5	5	20	5 5	impale	NO	NO	NO
+[A drawing utensil that can impale anyone with its sharp point]
+
+END

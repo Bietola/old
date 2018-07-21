@@ -1,0 +1,6 @@
+ID		NAME		GRA	FCLR	BCLR	MOVE_T	ESSENCE	RARITY	SPAWNLV	HP	MAN	ATT	DEF	LCK	AGI	VIS	MV1	MV2	MV3	MV4
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------:
+squadra		squadra		s	CYAN	BLACK	DUMMY	NORMAL	0	0	25	10	7	5	5	20	5 5	impale	NO	NO	NO
+[A drawing utensil that can impale anyone with its sharp point]
+
+END

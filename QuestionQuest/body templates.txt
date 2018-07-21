@@ -1,0 +1,10 @@
+ID				BODY PART LIST
+-----------------------------------------------------------------:
+bt_human			[arm(1);leg(2);body(1);head(1).]
+bt_squadra			[squadra(1).]
+bt_pencil			[pencil stick(1);pencil point(1);pencil eraser(1).]
+bt_slime			[body(1);slimy limb(6).]
+bt_octopus			[body(1);head(1);tentacle(8).]
+
+hbt_single_arm			[arm(1).]
+END

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="KTB" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/KTB" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/KTB" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="-fpermissive" />
+			<Add directory="C:/Libraries/PDCurses" />
+		</Compiler>
+		<Linker>
+			<Add library="C:/Libraries/PDCurses/pdcurses.lib" />
+			<Add directory="C:/Libraries/PDCurses" />
+		</Linker>
+		<Unit filename="Creature.cpp" />
+		<Unit filename="Creature.h" />
+		<Unit filename="Item.cpp" />
+		<Unit filename="Item.h" />
+		<Unit filename="Merchant.cpp" />
+		<Unit filename="Merchant.h" />
+		<Unit filename="Person.cpp" />
+		<Unit filename="Person.h" />
+		<Unit filename="Place.cpp" />
+		<Unit filename="Place.h" />
+		<Unit filename="Player.cpp" />
+		<Unit filename="Player.h" />
+		<Unit filename="Ship.cpp" />
+		<Unit filename="Ship.h" />
+		<Unit filename="ShipBuilding.cpp" />
+		<Unit filename="ShipBuilding.h" />
+		<Unit filename="ShipContr.cpp" />
+		<Unit filename="ShipContr.h" />
+		<Unit filename="Thing.h" />
+		<Unit filename="Timer.cpp" />
+		<Unit filename="Timer.h" />
+		<Unit filename="bar.cpp" />
+		<Unit filename="bar.h" />
+		<Unit filename="comments.cpp" />
+		<Unit filename="comments.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="memutils.cpp" />
+		<Unit filename="memutils.h" />
+		<Unit filename="menu.cpp" />
+		<Unit filename="menu.h" />
+		<Unit filename="names.cpp" />
+		<Unit filename="names.h" />
+		<Unit filename="palette.cpp" />
+		<Unit filename="palette.h" />
+		<Unit filename="ships.cpp" />
+		<Unit filename="ships.h" />
+		<Unit filename="uilts.cpp" />
+		<Unit filename="utils.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

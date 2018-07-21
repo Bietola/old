@@ -1,0 +1,10 @@
+WARNING - do not erase or modify this file, else the game migt crash.
+ID		NAME			ESS		SPWN_FLAGS	GRA	FCLR	BCLR	DANGER	PASSABLE/STAIRS
+--------------------------------------------------------------------------------------------------------------:
+def_floor	[floor]			[MEDICINE]	[FLOOR]		.	WHITE	BLACK	0	1	0
+def_grass	[grass]			[MEDICINE]	[GRASS]		;	GREEN	BLACK	1	1	0
+def_wall	[wall]			[MEDICINE]	[WALL]		#	WHITE	BLACK	0	0	0
+def_dstairs	[down stairs]		[MEDICINE]	[DSTAIRS]	>	YELLOW	BLACK	0	1	-1
+def_ustairs	[up stairs]		[MEDICINE]	[USTARIRS]	<	YELLOW	BLACK	0	1	1
+
+END

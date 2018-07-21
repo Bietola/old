@@ -1,0 +1,114 @@
+					TAVOLA PERIODICA
+**Legenda e Istruzioni per la modificazione
+
+*metodo con numero atomico
+numero atomico SIMBOLO nome n.o.,+n.o.,+-n.o.,...
+*Esempio
+17 Cl cloro +-1 +3 +5 +7
+
+*metodo con coordinate periodiche
+gruppo periodo SIMBOLO nome n.o.,...
+*Esempio
+11 4 Cu rame +1 +2
+*Esempio con elemento di transizione interna
+TI 1 5 Sm samario +2 +3
+
+*metodo senza informazioni su posizione
+SIMBOLO nome n.o.,...
+*Esempio
+N azoto +2 +-3 +4 +5
+NOTA: il numero atomico dell'elemento sarà uguale al numero dell'elemento precedente +1
+--------------------------------------------------------------------------------------------:
+1 H idrogeno +-1
+uro: idruro
+
+2 He elio 0
+no
+
+3 Li litio +1
+no
+
+4 Be berillio +2
+no
+
+5 B boro +3
+no
+
+6 C carbonio +2+-4
+uro: no
+oso: carboroso carborosa
+ico: carbonico carbonica
+
+7 N azoto +2 +-3 +4 +5
+oso: nitroso nitrosa
+ico: nitrico nitrica
+
+8 O ossigeno -2
+uro: ossido
+
+9 F fluoro -1
+uro: floruro
+
+10 Ne neon 0
+no
+
+11 Na sodio +1
+no
+
+12 Mg magnesio +2
+no
+
+13 Al alluminio +3
+no
+
+14 Si silicio +2 +-4
+oso: silicioso siliciosa
+ico: silicico silicica
+
+15 P fosforo +-3 +5
+no
+
+16 S zolfo -2 +4 +6
+uro: solfuro
+oso: solfoso solfosa
+ico: solfico solfico
+
+17 Cl cloro +-1 +3 +5 +7
+uro: cloruro
+oso: cloroso clorosa
+ico: clorico clorica
+
+18 Ar argon 0
+no
+
+19 K potassio +1
+no
+
+20 ca calcio +2
+no
+
+21 Sc scandio +3
+no
+
+22 Ti titanio +2 +3 +4
+oso: titanoso titanosa
+ico: titanico titanica
+
+23 V vanadio +2 +3 +4 +5
+oso: vanadioso vanadiosa
+ico: vanadico vandica
+
+24 Cr cromo +2 +3 +6
+oso: cromoso cromosa
+ico: cromico cromica
+
+25 Mn manganese +2 +3 +4 +6 +7
+oso: manganoso manganosa
+ico: manganico manganica
+
+26 Fe ferro +2 +3
+oso: ferroso ferrosa
+ico: ferrico ferrica
+
+:
+

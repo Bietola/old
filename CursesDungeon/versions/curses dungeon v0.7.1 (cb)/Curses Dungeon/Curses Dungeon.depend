@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1398796570 source:c:\users\stefano\documents\cartella bietolonica\programmi\c\curses dungeon\versions\curses dungeon v0.7.1 (cb)\curses dungeon\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<curses.h>
+	<string>
+	<sstream>
+
+1398796570 source:c:\users\stefano\documents\cartella bietolonica\programmi\c\curses\curses dungeon\versions\curses dungeon v0.7.1 (cb)\curses dungeon\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<curses.h>
+	<string>
+	<sstream>
+
+1434572428 source:c:\users\stefano\documents\programmi\c\curses\curses dungeon\versions\curses dungeon v0.7.1 (cb)\curses dungeon\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<curses.h>
+	<string>
+	<sstream>
+
+1434576028 source:c:\documents and settings\stefano\documenti\programmi\c\curses\curses dungeon\versions\curses dungeon v0.7.1 (cb)\curses dungeon\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<curses.h>
+	<string>
+	<sstream>
+
+1434576028 source:c:\code\c\curses\curses dungeon\versions\curses dungeon v0.7.1 (cb)\curses dungeon\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<curses.h>
+	<string>
+	<sstream>
+

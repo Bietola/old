@@ -1,0 +1,812 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\f0\fs22 /*\par
+Programmatore       : Stefano Montesi\par
+Programma           : "Dungeon" (il nome cambiera' eventualmente)\par
+Descrizione         : Un piccolo giochino stile "rough" fortemente in fase beta (:D)\par
+Ultima modifica     : 6/23/2013 - 11:27 PM\par
+*/\par
+\par
+#include <stdio.h>\par
+#include <stdlib.h>  //for rand() & srand()\par
+#include <time.h>    //for srand(time(NULL))\par
+#include <curses.h>\par
+\par
+#define MAS 200\par
+\par
+\par
+int Ir,j,k,x,y,x2,y2,vx,vy,ax,ay,mx,my;\par
+float aAtt,aHP,aMHP,aReg,aMov,aVel,aVis,aG,aRs;\par
+short aFcl,aBcl,aCpp,aSst[MAS];\par
+float Fr;\par
+char com;\par
+int mvx=32; //max=78 || max=maxx //def.=32 //HAS TO BE EVEN\par
+int mvy=17; //max=20 || max=maxy //def.=17\par
+int maxx=100;\par
+int maxy=100;\par
+char item  [200][200];\par
+float  status[200][200][200];\par
+\par
+//game modes (for debugging and easter eggs :D)\par
+bool M_ghost=true;  //the player turns into a ghost and continues playing with negative HP instead of dying when his HP reach 0\par
+bool M_zombie=false; //when the player's HP reach 0, he revives as a zombie (mHP/2;att*2;reg=0)\par
+\par
+//status[x][y][ps_rs] - "Role Status" the role that the entity is playing\par
+int rs_adv=1;\par
+int rs_ene=2;\par
+int rs_fri=3;\par
+int rs_lfl=4; //LiFeLess\par
+\par
+//status[x][y][n] - "Position Status" the position in the third dimension of the status array in which to strore what (n)\par
+short maxst=11;\par
+short ps_gra=0;\par
+short ps_gro=1;\par
+short ps_fcl=2;  //character (front) color\par
+short ps_bcl=3;  //background color\par
+short ps_cpp=4;  //color pairs pointer\par
+short ps_rs =5;  //role status\par
+short ps_HP =6;  //hit point (health)\par
+short ps_mHP=7;  //maximum hit points\par
+short ps_att=8;  //phisical attack\par
+short ps_reg=9;  //HP regenerated each turn\par
+short ps_vis=10;  //length of vision range\par
+short ps_mov=11; //movement points\par
+short ps_vel=12; //ammount of movement points gained each game-phase\par
+short ps_sst=13; //Special STatus (HAS TO BE THE LAST ONE)\par
+\par
+//status[x][y][ps_sst+n] - "Special STatus" the position in the third dimension of the status array in which to store what spcial statuses (n)\par
+short sst_und=0;\par
+\par
+/*\par
+//Controlls:\par
+char c_N =72;\par
+char c_NE=71;\par
+char c_E =75;\par
+char c_SE=79;\par
+char c_S =80;\par
+char c_SO=81;\par
+char c_O =77;\par
+char c_NO=73;\par
+*/\par
+\par
+//number controls (for numpad without numlock)\par
+char c_N ='8';\par
+char c_NE='7';\par
+char c_E ='4';\par
+char c_SE='1';\par
+char c_S ='2';\par
+char c_SO='3';\par
+char c_O ='6';\par
+char c_NO='9';\par
+char c_rest='5';\par
+\par
+//Technical stuff\par
+char t_null=0;\par
+\par
+//Graphics\par
+char g_light='.';\par
+char g_wall =/*177*/ '#';\par
+char g_tree ='T';\par
+\par
+//color pairs positions\par
+short cpp_def=1;\par
+\par
+//character colors\par
+short fcl_def=COLOR_WHITE;\par
+\par
+//background colors\par
+short bcl_def=COLOR_BLACK;\par
+\par
+\par
+//sleep function using time.h (copied from "{\field{\*\fldinst{HYPERLINK "http://ubuntuforums.org/showthread.php?t=296142"}}{\fldrslt{\ul\cf1 http://ubuntuforums.org/showthread.php?t=296142}}}\f0\fs22 ")\par
+void sleep(unsigned int mseconds)\{\par
+    clock_t goal = mseconds + clock();\par
+    while (goal > clock());\par
+\}\par
+\par
+void print_attr(const char* name,float n,int row,int col)\{\par
+\tab //a f. that prints an ATTRibute\par
+\tab move(row,40+(col*15));\par
+\tab addstr(name);\par
+\tab printw(" =");\par
+\tab if(n<10) printw("   ");\par
+\tab if(n>=10 && n<100) printw("  ");\par
+\tab if(n>=100 && n<1000) printw(" ");\par
+\tab printw("%.1f",n);\par
+\}\par
+\par
+bool lifeChk(int xx,int yy)\{\par
+\tab if(status[xx][yy][ps_rs]==rs_ene) return true;\par
+\tab if(status[xx][yy][ps_rs]==rs_adv) return true;\par
+\tab if(status[xx][yy][ps_rs]==rs_fri) return true;\par
+\tab else return false;\par
+\}\par
+\par
+bool spawnChk(int xx,int yy)\{\par
+\tab if(status[xx][yy][ps_rs]==t_null) return true;\par
+\tab else return false;\par
+\}\par
+\par
+float FrandRng(float min, float max)\{\par
+\tab float r = min + (float)rand()/((float)RAND_MAX/(max-min));\par
+\tab return r;\par
+\}\par
+\par
+int IrandRng(int min,int max)\{\par
+\tab int r = min + (int)rand()/((int)RAND_MAX/(max-min));\par
+\tab return r;\par
+\}\par
+\par
+void setGra(int xx,int yy,char n)\{\par
+\tab status[xx][yy][ps_gra]=n;\par
+\}\par
+\par
+void setFcl(int xx,int yy,short n)\{\par
+\tab status[xx][yy][ps_fcl]=n;\par
+\}\par
+\par
+void setBcl(int xx,int yy,short n)\{\par
+\tab status[xx][yy][ps_bcl]=n;\par
+\}\par
+\par
+void setCpp(int xx,int yy,short n)\{\par
+\tab status[xx][yy][ps_cpp]=n;\par
+\}\par
+\par
+void setRS (int xx,int yy,int n)\{\par
+\tab status[xx][yy][ps_rs]=n;\par
+\}\par
+\par
+void setAtt(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_att]=n;\par
+\}\par
+\par
+void chaAtt(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_att]+=n;\par
+\}\par
+\par
+void molAtt(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_att]*=n;\par
+\}\par
+\par
+void setHP(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_HP]=n;\par
+\}\par
+\par
+void chaHP(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_HP]+=n;\par
+\}\par
+\par
+void molHP(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_HP]*=n;\par
+\}\par
+\par
+void setMHP(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_mHP]=n;\par
+\}\par
+\par
+void chaMHP(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_mHP]+=n;\par
+\}\par
+\par
+void molMHP(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_mHP]*=n;\par
+\}\par
+\par
+void setReg(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_reg]=n;\par
+\}\par
+\par
+void chaReg(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_reg]+=n;\par
+\}\par
+\par
+void molReg(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_reg]*=n;\par
+\}\par
+\par
+void setVis(int xx,int yy,int n)\{\par
+\tab status[xx][yy][ps_vis]=n;\par
+\}\par
+\par
+void chaVis(int xx,int yy,int n)\{\par
+\tab status[xx][yy][ps_vis]+=n;\par
+\}\par
+\par
+void molVid(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_vis]*=n;\par
+\}\par
+\par
+void setMov(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_mov]=n;\par
+\}\par
+\par
+void chaMov(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_mov]+=n;\par
+\}\par
+\par
+void molMov(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_mov]*=n;\par
+\}\par
+\par
+void setVel(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_vel]=n;\par
+\}\par
+\par
+void chaVel(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_vel]+=n;\par
+\}\par
+\par
+void molVel(int xx,int yy,float n)\{\par
+\tab status[xx][yy][ps_vel]*=n;\par
+\}\par
+\par
+void setSst(int xx,int yy,short n[MAS])\{\par
+\tab k=0;\par
+\tab for(j=0;j<MAS;j++)\{\par
+\tab\tab if(n[j]!=t_null)\{\par
+\tab\tab\tab status[xx][yy][ps_sst+k]=n[j];\par
+\tab\tab\tab k++;\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\par
+void getSst(int xx,int yy,short n[MAS])\{\par
+\tab k=0;\par
+\tab for(j=0;j<MAS;j++)\{\par
+\tab\tab if(status[xx][yy][ps_sst+j]!=t_null)\{\par
+\tab\tab\tab n[k]=status[xx][yy][ps_sst+j];\par
+\tab\tab\tab k++;\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\par
+void spawn(int xx,int yy/*char g,const char* name*/,char gra,short fcl,short bcl,short cpp,int rs,float att,float hp,float mhp,float reg,float mov,float vel,int vis,short sst[100])\{\par
+\tab setGra(xx,yy,gra);\par
+\tab setFcl(xx,yy,fcl);\par
+\tab setBcl(xx,yy,bcl);\par
+\tab setCpp(xx,yy,cpp);\par
+\tab setRS(xx,yy,rs);\par
+\tab setHP(xx,yy,hp);\par
+\tab setMHP(xx,yy,mhp);\par
+\tab setReg(xx,yy,reg);\par
+\tab setAtt(xx,yy,att);\par
+\tab setMov(xx,yy,mov);\par
+\tab setVel(xx,yy,vel);\par
+\tab setVis(xx,yy,vis);\par
+\tab setSst(xx,yy,sst);\par
+\}\par
+\par
+void spawn_m(int xx,int yy,const char* ent/*ENTity to spawn*/)\{\par
+\tab float sRS,sHP,sMHP,sReg,sAtt,sVis,sMov,sVel;\par
+\tab char sGra;\par
+\tab short sFcl,sBcl,sCpp,sSst[MAS];\par
+\tab //reset sSst\par
+\tab for(j=0;j<MAS;j++) sSst[j]=t_null;\par
+\tab //spawns\par
+\tab if(ent=="adv" || ent=="adventurer")\{\par
+\tab\tab sGra ='@';\par
+\tab\tab sFcl =COLOR_BLACK;\par
+\tab\tab sBcl =COLOR_WHITE;\par
+\tab\tab sCpp =2;\par
+\tab\tab sRS  =rs_adv;\par
+\tab\tab sMHP =30.0;\par
+\tab\tab sHP  =sMHP;\par
+\tab\tab sReg =0.2;\par
+\tab\tab sAtt =3.0;\par
+\tab\tab sVis =t_null;\par
+\tab\tab sMov =t_null;\par
+\tab\tab sVel =t_null;\par
+\tab\}\par
+\tab if(ent=="wall")\{\par
+\tab\tab sGra ='#';\par
+\tab\tab sFcl =COLOR_YELLOW;\par
+\tab\tab sBcl =COLOR_BLACK;\par
+\tab\tab sCpp =3;\par
+\tab\tab sRS  =rs_lfl;\par
+\tab\tab sMHP =t_null;\par
+\tab\tab sHP  =t_null;\par
+\tab\tab sReg =t_null;\par
+\tab\tab sAtt =t_null;\par
+\tab\tab sVis =t_null;\par
+\tab\tab sMov =t_null;\par
+\tab\tab sVel =t_null;\par
+\tab\tab sSst[0]=sst_und;\tab\par
+\tab\}\par
+\tab if(ent=="slime")\{\par
+\tab\tab sGra ='s';\par
+\tab\tab sFcl =COLOR_CYAN;\par
+\tab\tab sBcl =COLOR_BLACK;\par
+\tab\tab sCpp =4;\par
+\tab\tab sRS  =rs_ene;\par
+\tab\tab sMHP =FrandRng(3.0,8.0);\par
+\tab\tab sHP  =sMHP;\par
+\tab\tab sReg =FrandRng(0.3,0.5);\par
+\tab\tab sAtt =IrandRng(1.0,3.0);\par
+\tab\tab sVis =IrandRng(20.0,40.0);\par
+\tab\tab sVel =1.0;\par
+\tab\tab sMov =sVel;\par
+\tab\}\par
+\tab else if(ent=="creep" || ent=="creeper")\{\par
+\tab\tab sGra ='c';\par
+\tab\tab sFcl =COLOR_YELLOW;\par
+\tab\tab sBcl =COLOR_BLACK;\par
+\tab\tab sCpp =5;\par
+\tab\tab sRS  =rs_ene;\par
+\tab\tab sMHP =FrandRng(5.0,12.0);\par
+\tab\tab sHP  =sMHP;\par
+\tab\tab sReg =FrandRng(0.0,0.2);\par
+\tab\tab sAtt =IrandRng(2.0,5.0);\par
+\tab\tab sVis =IrandRng(20.0,40.0);\par
+\tab\tab sVel =1.0;\par
+\tab\tab sMov =sVel;\par
+\tab\}\par
+\tab else if(ent=="masti" || ent=="mastichino")\{\par
+\tab\tab sGra ='m';\par
+\tab\tab sFcl =COLOR_RED;\par
+\tab\tab sBcl =COLOR_BLACK;\par
+\tab\tab sCpp =6;\par
+\tab\tab sRS  =rs_ene;\par
+\tab\tab sMHP =FrandRng(4.0,7.0);\par
+\tab\tab sHP  =sMHP;\par
+\tab\tab sReg =FrandRng(0.1,0.3);\par
+\tab\tab sAtt =IrandRng(2.0,4.0);\par
+\tab\tab sVis =IrandRng(20.0,40.0);\par
+\tab\tab sVel =FrandRng(1.2,1.5);\par
+\tab\tab sMov =sVel;\par
+\tab\}\par
+\tab spawn(xx,yy,sGra,sFcl,sBcl,sCpp,sRS,sAtt,sHP,sMHP,sReg,sMov,sVel,sVis,sSst);\par
+\}\par
+\par
+/*void despawn(int xx,int yy)\{\par
+\tab life[xx][yy]=t_null;\par
+    for (j=0;j<maxst;j++) status[xx][yy][j]=t_null;\par
+\}*/\par
+\par
+void despawn(int xx,int yy)\{\par
+\tab status[xx][yy][ps_gra]=t_null;\par
+\tab status[xx][yy][ps_fcl]=t_null;\par
+\tab status[xx][yy][ps_cpp]=t_null;\par
+    status[xx][yy][ps_rs]=t_null;\par
+    status[xx][yy][ps_HP]=t_null;\par
+    status[xx][yy][ps_mHP]=t_null;\par
+    status[xx][yy][ps_reg]=t_null;\par
+    status[xx][yy][ps_att]=t_null;\par
+    status[xx][yy][ps_mov]=t_null;\par
+    status[xx][yy][ps_vel]=t_null;\par
+    status[xx][yy][ps_vis]=t_null;\par
+\}\par
+\par
+/*//TEST: put maxx = mxv & maxy = mxy\par
+void generate_g()\{\par
+\tab for(y=maxy-1;y>=0;y--)\{\par
+\tab\tab for(x=maxx-1;x>=0;x--)\{\par
+\tab\tab\tab ground[x][y]=g_light;\par
+\tab\tab\tab if(x==maxy/2 && y!=15) ground[x][y]=g_wall;\par
+\tab\tab\tab //default\par
+\tab\tab\tab if(x==maxx-1 || x==0 || y==maxy-1 || y==0) ground[x][y]=g_wall;\par
+\tab\tab\}\par
+\tab\}\par
+\}/**/\par
+\par
+void generate_g()\{\par
+\tab for(y=maxy-1;y>=0;y--)\{\par
+\tab\tab for(x=maxx-1;x>=0;x--)\{\par
+\tab\tab\tab status[x][y][ps_gro]=g_light;\par
+\tab\tab\tab Ir=rand()%1000;\par
+\tab\tab\tab if(Ir>=750 && Ir<985) spawn_m(x,y,"wall");\par
+\tab\tab\tab ///if(Ir>=985) status[x][y][ps_gro]=g_tree;\par
+\tab\tab\tab //default\par
+\tab\tab\tab if(x==maxx-1 || x==0 || y==maxy-1 || y==0) status[x][y][ps_gra]=g_wall;\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\par
+void start_game()\{\par
+\tab //start random seed\par
+\tab srand(time(NULL));\par
+\tab //reset\par
+\tab for(y=maxy-1;y>=0;y--)\{\par
+\tab\tab for(x=maxx-1;x>=0;x--)\{\par
+\tab\tab\tab item  [x][y]=t_null;\par
+\tab\tab\tab //reset status\par
+\tab\tab\tab for(j=0;j<maxst;j++) status[x][y][j]=t_null;\par
+\tab\tab\}\par
+\tab\}\par
+\tab generate_g();\par
+\tab //spawn character\par
+\tab j=0;\par
+\tab for(y=maxy/2;y>=0;y--)\{\par
+\tab\tab for(x=maxx/2;x>=0;x--)\{\par
+\tab\tab\tab if(spawnChk(x,y)==true)\{\par
+\tab\tab\tab\tab spawn_m(x,y,"adv");\par
+\tab\tab\tab\tab //ini. ax & ay\par
+\tab\tab\tab\tab ax=x;\par
+\tab\tab\tab\tab ay=y;\par
+\tab\tab\tab\tab //ini. vx & vy\par
+\tab\tab\tab\tab vx=mvx/2+x;\par
+\tab\tab\tab\tab vy=mvy/2+y;\par
+\tab\tab\tab\tab j=1;\par
+\tab\tab\tab\}\par
+\tab\tab\tab if(j==1) break;\par
+\tab\tab\}\par
+\tab\tab if(j==1) break;\par
+\tab\}\par
+\}\par
+\par
+void i_spawn_ms()\{\par
+\tab //spawns monsters (made to be used one time only)\par
+    for(y=maxy-1;y>=0;y--)\{\par
+\tab\tab for(x=maxx-1;x>=0;x--)\{\par
+\tab\tab\tab Ir=rand()%250;\par
+\tab\tab\tab if(spawnChk(x,y)==true && status[x][y][ps_rs]==t_null)\{\par
+\tab\tab\tab\tab if(Ir==0)\{\par
+\tab\tab\tab\tab\tab Ir=rand()%100;\par
+                \tab if(Ir<=45) spawn_m(x,y,"slime");\par
+                \tab if(Ir>45 && Ir<=75) spawn_m(x,y,"masti");\par
+\tab\tab\tab\tab\tab if(Ir> 75) spawn_m(x,y,"creeper");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\par
+void spawn_ms()\{\par
+\tab //spawns monsters (made to be used continusly)\par
+   \tab for(y=0;y<maxx;y++)\{\par
+\tab\tab for(x=0;x<maxy;x++)\{\par
+\tab\tab\tab Fr=FrandRng(0.00000,1000000000000000.00000);\par
+\tab\tab\tab if(spawnChk(x,y)==true && status[x][y][ps_rs]==t_null)\{\par
+\tab\tab\tab\tab if(Fr==0.00000)\{\par
+\tab\tab\tab\tab\tab Ir=rand()%100;\par
+                \tab if(Ir<=40) spawn_m(x,y,"slime");\par
+                \tab if(Ir>40 && Ir<=75) spawn_m(x,y,"masti");\par
+\tab\tab\tab\tab\tab if(Ir> 75) spawn_m(x,y,"creeper");\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\par
+void board_updt()\{\par
+\tab for(y=maxy-1;y>=0;y--)\{\par
+\tab\tab for(x=maxx-1;x>=0;x--)\{\par
+\tab\tab\tab if(lifeChk(x,y)==true)\{\par
+\tab\tab\tab\tab //**ADVENTURER AND MONSTERS**//\par
+\tab\tab\tab\tab //regenerate HP\par
+\tab\tab\tab\tab status[x][y][ps_HP]+=status[x][y][ps_reg];\par
+\tab\tab\tab\tab //keep HP lower than mHP\par
+\tab\tab\tab\tab if(status[x][y][ps_HP]>status[x][y][ps_mHP]) status[x][y][ps_HP]=status[x][y][ps_mHP];\par
+\tab\tab\tab\tab //**MONSTERS ONLY**//\par
+\tab\tab\tab\tab if(status[x][y][ps_rs]!=rs_adv)\{\par
+\tab\tab\tab\tab\tab //regenerate mov\par
+\tab\tab\tab\tab\tab status[x][y][ps_mov]+=status[x][y][ps_vel];\par
+\tab\tab\tab\tab\tab //despawn monsters when their HP reahces 0\par
+\tab\tab\tab\tab\tab if(status[x][y][ps_HP]<1 && status[x][y][ps_rs]!=rs_adv) despawn(x,y);\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab //**ADVENTURER ONLY (modes)**//\par
+\tab\tab\tab\tab if(status[x][y][ps_rs]==rs_adv)\{\par
+\tab\tab\tab\tab\tab //ghost mode\par
+\tab\tab\tab\tab\tab if(M_ghost==true)\{\par
+\tab\tab\tab\tab\tab\tab if(status[ax][ay][ps_HP]<1) setGra(ax,ay,'G');\par
+\tab\tab\tab\tab\tab\tab if(status[ax][ay][ps_HP]>=1) setGra(ax,ay,'@');\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab //zombie mode\par
+\tab\tab\tab\tab\tab else if(M_zombie==true)\{\par
+\tab\tab\tab\tab\tab\tab if(status[ax][ay][ps_HP]<1)\{\par
+\tab\tab\tab\tab\tab\tab\tab if(status[ax][ay][ps_gra]!='Z')\{\par
+\tab\tab\tab\tab\tab\tab\tab\tab setGra(ax,ay,'Z');\par
+\tab\tab\tab\tab\tab\tab\tab\tab setFcl(ax,ay,COLOR_GREEN);\par
+\tab\tab\tab\tab\tab\tab\tab\tab molMHP(ax,ay,0.5);\par
+\tab\tab\tab\tab\tab\tab\tab\tab setHP(ax,ay,status[ax][ay][ps_mHP]);\par
+\tab\tab\tab\tab\tab\tab\tab\tab molAtt(ax,ay,2);\par
+\tab\tab\tab\tab\tab\tab\tab\tab setReg(ax,ay,0);\par
+\tab\tab\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\par
+void print_vision()\{\par
+\tab int mnsN=0;\par
+\tab move(0,0);\par
+\tab //erase side comments\par
+\tab for(y=0;y<100;y++)\{\par
+\tab\tab for(x=38;x<100;x++)\{\par
+\tab\tab\tab mvprintw(y,x," ");\par
+\tab\tab\}\par
+\tab\}\par
+\tab //print board\par
+   \tab for(y=0;y<mvy;y++)\{\par
+\tab\tab for(x=0;x<mvx;x++)\{\par
+\tab\tab\tab //set colors\par
+\tab\tab\tab init_pair(status[vx-x][vy-y][ps_cpp],status[vx-x][vy-y][ps_fcl],status[vx-x][vy-y][ps_bcl]);\par
+\tab\tab\tab attron(COLOR_PAIR(status[vx-x][vy-y][ps_cpp]));\par
+\tab\tab\tab //print game-screen\par
+\tab\tab\tab if(lifeChk(vx-x,vy-y)==true) mvaddch(y,x,status[vx-x][vy-y][ps_gra]);\par
+\tab\tab\tab else if(item[vx-x][vy-y]!=t_null) mvaddch(y,x,item[vx-x][vy-y]);\par
+\tab\tab\tab else mvaddch(y,x,status[vx-x][vy-y][ps_gro]);\par
+\tab\tab\tab //reset default color\par
+\tab\tab\tab init_pair(cpp_def,fcl_def,bcl_def);\par
+\tab\tab\tab attron(COLOR_PAIR(cpp_def));\par
+\tab\tab\tab //print monsters and items inside vision range(WIP)\par
+\tab\tab\tab if(status[vx-x][vy-y][ps_rs]==rs_ene)\{\par
+\tab\tab\tab\tab attron(COLOR_PAIR(status[vx-x][vy-y][ps_cpp]));\par
+\tab\tab\tab\tab mvprintw(7+mnsN,38,"%c - ATT:%.1f HP :%.1f VEL:%.1f REG:%.1f\\t",(char)status[vx-x][vy-y][ps_gra],status[vx-x][vy-y][ps_att],status[vx-x][vy-y][ps_HP],status[vx-x][vy-y][ps_vel],status[vx-x][vy-y][ps_reg]);\par
+\tab\tab\tab\tab attron(COLOR_PAIR(cpp_def));\par
+\tab\tab\tab\tab mnsN++;\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\}\par
+\tab //print adv attributes\par
+\tab print_attr("ATT",status[ax][ay][ps_att],1,0);\par
+\tab print_attr("HP ",status[ax][ay][ps_HP],2,0);\par
+\tab print_attr("REG",status[ax][ay][ps_reg],3,0);\par
+\tab print_attr("mHP",status[ax][ay][ps_mHP],2,1);\par
+\tab //*--DEBUG--*/print_attr("xAT",status[ax][ay+1][ps_att],1,1);\par
+\tab //*--DEBUG--*/print_attr("xHP",status[ax][ay+1][ps_HP],2,1);\par
+\tab //print monsters and items on the screen\par
+\tab //print comments (WIP)\par
+\tab mvprintw(19,0,"coos:  %d;%d\\n\\nlast com: %c (%d)",ax,ay,com,com);\par
+\tab refresh();\par
+\}\par
+\par
+void attk(int atx,int aty,int dex,int dey)\{\par
+\tab //WIP\par
+\tab chaHP(dex,dey,-status[atx][aty][ps_att]);\par
+\}\par
+\par
+void mns_move()\{\par
+\tab bool advfChk=false;\par
+\tab int movx,movy,ox,oy,mnx,mny;\par
+\tab float mAtt,mHP,mMHP,mReg,mMov,mVel,mVis,mG,mRs;\par
+\tab short mFcl,mBcl,mCpp,mSst[MAS];\par
+\tab //reset mSst\par
+\tab for(j=0;j<MAS;j++) mSst[j]=t_null;\par
+\tab //monsters move\par
+\tab for(y=maxy-1;y>=0;y--)\{\par
+\tab\tab for(x=maxx-1;x>=0;x--)\{\par
+\tab\tab\tab if(lifeChk(x,y)==true && status[x][y][ps_rs]==rs_ene && status[x][y][ps_mov]>=1)\{\par
+\tab\tab\tab\tab mnx=x;\par
+\tab\tab\tab\tab mny=y;\par
+\tab\tab\tab\tab for(;status[mnx][mny][ps_mov]>=1;status[mnx][mny][ps_mov]--)\{\par
+\tab\tab\tab\tab\tab //*DEBUG*/mvprintw(12,40,"%.1f",status[mnx][mny][ps_mov]);\par
+\tab\tab\tab\tab\tab //*DEBUG*/refresh();\par
+\tab\tab\tab\tab\tab //*DEBUG*/getch();\par
+\tab\tab\tab\tab\tab mG  =status[mnx][mny][ps_gra];\par
+\tab\tab\tab\tab\tab mRs =status[mnx][mny][ps_rs];\par
+\tab\tab\tab\tab\tab mFcl=status[mnx][mny][ps_fcl];\par
+\tab\tab\tab\tab\tab mBcl=status[mnx][mny][ps_bcl];\par
+\tab\tab\tab\tab\tab mCpp=status[mnx][mny][ps_cpp];\par
+\tab\tab\tab\tab\tab mAtt=status[mnx][mny][ps_att];\par
+\tab\tab\tab\tab\tab mHP =status[mnx][mny][ps_HP];\par
+\tab\tab\tab\tab\tab mMHP=status[mnx][mny][ps_mHP];\par
+\tab\tab\tab\tab\tab mReg=status[mnx][mny][ps_reg];\par
+\tab\tab\tab\tab\tab mVis=status[mnx][mny][ps_vis];\par
+\tab\tab\tab\tab\tab mVel=status[mnx][mny][ps_vel];\par
+\tab\tab\tab\tab\tab getSst(mnx,mny,mSst);\par
+\tab\tab\tab\tab\tab for(y2=mny+mVis/2;(y2>=mny-mVis/2 && y2>0);y2--)\{\par
+\tab\tab\tab\tab\tab\tab for(x2=mnx+mVis/2;(x2>=mnx-mVis/2 && x2>0);x2--)\{\par
+\tab\tab\tab\tab\tab\tab\tab if(status[x2][y2][ps_rs]==rs_adv || status[x2][y2][ps_rs]==rs_fri)\{\par
+\tab\tab\tab\tab\tab\tab\tab\tab advfChk=true;\tab\par
+\tab\tab\tab\tab\tab\tab\tab\tab //*DEBUG*/mvprintw(14,40,"adv detcted by %c at coos: %d,%d",mG,mnx,mny);\par
+\tab\tab\tab\tab\tab\tab\tab\tab //*DEBUG*/mvprintw(15,40,"adv is at coos: %d,%d",x2,y2);\par
+\tab\tab\tab\tab\tab\tab\tab\tab //*DEBUG*/refresh();\par
+\tab\tab\tab\tab\tab\tab\tab\tab //*DEBUG*/getch();\par
+\tab\tab\tab\tab\tab\tab\tab\tab movx=x2-mnx;\par
+\tab\tab\tab\tab\tab\tab\tab\tab movy=y2-mny;\par
+\tab\tab\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab if(advfChk==false)\{\par
+\tab\tab\tab\tab\tab\tab x2=IrandRng(mnx+mVis/2,mnx-mVis/2);\par
+\tab\tab\tab\tab\tab\tab y2=IrandRng(mny+mVis/2,mny-mVis/2);\par
+\tab\tab\tab\tab\tab\tab movx=x2-mnx;\par
+\tab\tab\tab\tab\tab\tab movy=y2-mny;\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab advfChk=false;\par
+\tab\tab\tab\tab\tab //calculation of "ox and oy" (where the monster is going to move at)\par
+\tab\tab\tab\tab\tab if(movx==0) ox=mnx;\par
+\tab\tab\tab\tab\tab else\{\par
+\tab\tab\tab\tab\tab\tab movx=movx/abs(movx);\par
+\tab\tab\tab\tab\tab\tab ox=mnx+movx;\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab if(movy==0) oy=mny;\par
+\tab\tab\tab\tab\tab else\{\par
+\tab\tab\tab\tab\tab\tab movy=movy/abs(movy);\par
+\tab\tab\tab\tab\tab\tab oy=mny+movy;\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab if(status[ox][oy][ps_rs]==rs_lfl || status[ox][oy][ps_rs]==rs_ene)\{\par
+\tab\tab\tab\tab\tab\tab for(j=0;((spawnChk(ox,oy)==false || status[ox][oy][ps_rs]==rs_ene) && j<8);j++)\{\par
+\tab\tab\tab\tab\tab\tab\tab if(ox<mnx) oy--;\par
+\tab\tab\tab\tab\tab\tab\tab if(ox>mnx) oy++;\par
+\tab\tab\tab\tab\tab\tab\tab if(oy<mny) ox++;\par
+\tab\tab\tab\tab\tab\tab\tab if(oy>mny) ox--;\par
+\tab\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab if(status[ox][oy][ps_rs]==rs_adv || status[ox][oy][ps_rs]==rs_fri)\{\par
+\tab\tab\tab\tab\tab\tab //*DEBUG*/mvprintw(11,40,"adv (%d,%d) attacked by %c (%d,%d)",ox,oy,mG,mnx,mny);\par
+\tab\tab\tab\tab\tab\tab //*DEBUG*/mvprintw(12,40,"adv current life: %d",status[ox][oy][ps_HP]);\par
+\tab\tab\tab\tab\tab\tab //*DEBUG*/refresh();\par
+\tab\tab\tab\tab\tab\tab //*DEBUG*/getch();\par
+\tab\tab\tab\tab\tab\tab attk(mnx,mny,ox,oy);\par
+\tab\tab\tab\tab\tab\tab ox=mnx;\par
+\tab\tab\tab\tab\tab\tab oy=mny;\par
+\tab\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab\tab mMov=status[mnx][mny][ps_mov];\par
+\tab\tab\tab\tab\tab despawn(mnx,mny);\par
+\tab\tab\tab\tab\tab spawn(ox,oy,mG,mFcl,mBcl,mCpp,rs_ene,mAtt,mHP,mMHP,mReg,mMov,mVel,mVis,mSst);\par
+\tab\tab\tab\tab\tab //*DEBUG*/mvprintw(12,40,"spawned %c from %d %d to %d %d",mG,mnx,mny,ox,oy);\par
+\tab\tab\tab\tab\tab //*DEBUG*/refresh();\par
+\tab\tab\tab\tab\tab //*DEBUG*/getch();\par
+\tab\tab\tab\tab\tab mnx=ox;\par
+\tab\tab\tab\tab\tab mny=oy;\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\tab //*DEBUG*/mvprintw(12,40,"%.1f",status[mnx][mny][ps_mov]);\par
+\tab\tab\tab\tab //*DEBUG*/refresh();\par
+\tab\tab\tab\tab //*DEBUG*/getch();\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\}\par
+\}\par
+\par
+void adv_move()\{\par
+\tab aG  =status[ax][ay][ps_gra];\par
+\tab aRs =status[ax][ay][ps_rs];\par
+\tab aFcl=status[ax][ay][ps_fcl];\par
+\tab aBcl=status[ax][ay][ps_bcl];\par
+\tab aCpp=status[ax][ay][ps_cpp];\par
+\tab aAtt=status[ax][ay][ps_att];\par
+\tab aHP =status[ax][ay][ps_HP];\par
+\tab aMHP=status[ax][ay][ps_mHP];\par
+\tab aReg=status[ax][ay][ps_reg];\par
+\tab aVis=status[ax][ay][ps_vis];\par
+\tab aVel=status[ax][ay][ps_vel];\par
+\tab getSst(ax,ay,aSst);\par
+\tab mx=ax;\par
+\tab my=ay;\par
+\tab if(com==c_N)\{\par
+\tab\tab //change adv. coos\par
+\tab\tab ay++;\par
+\tab\tab //move adv. vision & check if adv. can move\par
+\tab\tab if((spawnChk(ax,ay)==true && lifeChk(ax,ay)==false) || (lifeChk(ax,ay)==true && status[ax][ay][ps_rs]==rs_fri))\{\par
+\tab\tab\tab if (ay<maxy-mvy/2 && ay>mvy/2) vy++;\par
+\tab\tab\}\par
+\tab\}\par
+\tab if(com==c_NE)\{\par
+\tab\tab //change adv. coos\par
+\tab\tab ay++;\par
+\tab\tab ax++;\par
+\tab\tab //move adv. vision & check if adv. can move\par
+\tab\tab if((spawnChk(ax,ay)==true && lifeChk(ax,ay)==false) || (lifeChk(ax,ay)==true && status[ax][ay][ps_rs]==rs_fri))\{\par
+\tab\tab\tab if(ay<maxy-mvy/2 && ay>mvy/2) vy++;\par
+\tab\tab\tab if(ax<maxx-mvx/2 && ax>mvx/2-1) vx++;\par
+\tab\tab\}\par
+\tab\}\par
+\tab if(com==c_E)\{\par
+\tab\tab //change adv. coos\par
+\tab\tab ax++;\par
+\tab\tab //move adv. vision & check if adv. can move\par
+\tab\tab if((spawnChk(ax,ay)==true && lifeChk(ax,ay)==false) || (lifeChk(ax,ay)==true && status[ax][ay][ps_rs]==rs_fri))\{\par
+\tab\tab\tab if(ax<maxx-mvx/2 && ax>mvx/2-1) vx++;\par
+\tab\tab\}\par
+\tab\}\par
+\tab if(com==c_SE)\{\par
+\tab\tab //change adv. coos\par
+\tab\tab ay--;\par
+\tab\tab ax++;\par
+\tab\tab //move adv. vision & check if adv. can move\par
+\tab\tab if((spawnChk(ax,ay)==true && lifeChk(ax,ay)==false) || (lifeChk(ax,ay)==true && status[ax][ay][ps_rs]==rs_fri))\{\par
+\tab\tab\tab if(ay>mvy/2-1 && ay<maxy-mvy/2-1) vy--;\par
+\tab\tab\tab if(ax<maxx-mvx/2 && ax>mvx/2-1) vx++;\par
+\tab\tab\}\par
+\tab\}\par
+\tab if(com==c_S)\{\par
+\tab\tab //change adv. coos\par
+\tab\tab ay--;\par
+\tab\tab //move adv. vision & check if adv. can move\par
+\tab\tab if((spawnChk(ax,ay)==true && lifeChk(ax,ay)==false) || (lifeChk(ax,ay)==true && status[ax][ay][ps_rs]==rs_fri))\{\par
+\tab\tab\tab if(ay>mvy/2-1 && ay<maxy-mvy/2-1) vy--;\par
+\tab\tab\}\par
+\tab\}\par
+\tab if(com==c_SO)\{\par
+\tab\tab //change adv. coos\par
+\tab\tab ay--;\par
+\tab\tab ax--;\par
+\tab\tab //move adv. vision & check if adv. can move\par
+\tab\tab if((spawnChk(ax,ay)==true && lifeChk(ax,ay)==false) || (lifeChk(ax,ay)==true && status[ax][ay][ps_rs]==rs_fri))\{\par
+\tab\tab\tab if(ay>mvy/2-1 && ay<maxy-mvy/2-1) vy--;\par
+\tab\tab\tab if(ax>mvx/2-2 && ax<maxx-mvx/2-1) vx--;\par
+\tab\tab\}\par
+\tab\}\par
+\tab if(com==c_O)\{\par
+\tab\tab //change adv. coos\par
+\tab\tab ax--;\par
+\tab\tab //move adv. vision & check if adv. can move\par
+\tab\tab if((spawnChk(ax,ay)==true && lifeChk(ax,ay)==false) || (lifeChk(ax,ay)==true && status[ax][ay][ps_rs]==rs_fri))\{\par
+\tab\tab\tab if(ax>mvx/2-2 && ax<maxx-mvx/2-1) vx--;\par
+\tab\tab\}\par
+\tab\}\par
+\tab if(com==c_NO)\{\par
+\tab\tab //change adv. coos\par
+\tab\tab ay++;\par
+\tab\tab ax--;\par
+\tab\tab //move adv. vision & check if adv. can move\par
+\tab\tab if((spawnChk(ax,ay)==true && lifeChk(ax,ay)==false) || (lifeChk(ax,ay)==true && status[ax][ay][ps_rs]==rs_fri))\{\par
+\tab\tab\tab if(ay<maxy-mvy/2 && ay>mvy/2) vy++;\par
+\tab\tab\tab if(ax>mvx/2-2 && ax<maxx-mvx/2-1) vx--;\par
+\tab\tab\}\par
+\tab\}\par
+\tab if(com=='s')\{\par
+\tab\tab i_spawn_ms();\par
+\tab\}\par
+\tab if(com=='r')\{\par
+\tab\tab aHP=aMHP;\par
+\tab\}\par
+\tab //check if there's an hostile "life" in the place that the adv. is trying to move in and attack it\par
+\tab if(lifeChk(ax,ay)==true && status[ax][ay][ps_rs]==rs_ene)\{\par
+\tab\tab attk(mx,my,ax,ay);\par
+\tab\}\par
+\tab if(spawnChk(ax,ay)==false || lifeChk(ax,ay)==true)\{\par
+\tab\tab ax=mx;\par
+\tab\tab ay=my;\par
+\tab\}\par
+\tab despawn(mx,my);\par
+\tab spawn(ax,ay,aG,aFcl,aBcl,aCpp,aRs,aAtt,aHP,aMHP,aReg,aMov,aVel,aVis,aSst);\par
+\}\par
+\par
+bool chk_death()\{\par
+\tab if(M_ghost==false && status[ax][ay][ps_HP]<1) return true;\par
+\tab else return false;\par
+\}\par
+\par
+void end()\{\par
+\tab system("cls");\par
+\tab move(0,0);\par
+\tab printw("you lost, good luck next time :)");\par
+\tab printw("\\npress any key to close the program");\par
+\tab getch();\par
+\}\par
+\par
+int main()\par
+\{\par
+\tab //curses initialization\par
+\tab initscr();\par
+\tab noecho();\par
+\tab raw();\par
+\tab keypad(stdscr, TRUE);\par
+\tab //colors initialization\par
+\tab start_color();\par
+\tab //game initialization\par
+\tab start_game();\par
+\tab //*TEST*/spawn_m(8,maxy/2,"masti");\par
+\tab i_spawn_ms();\par
+\tab print_vision();\par
+\tab //main loop\par
+\tab while(true)\{\par
+\tab\tab //input\par
+\tab\tab com=getch();\par
+\tab\tab //spawn monsters\par
+\tab\tab ///spawn_ms();\par
+\tab\tab //adv. stuff\par
+\tab\tab adv_move();\par
+\tab\tab //monster stuff (WIP)\par
+\tab\tab mns_move();\par
+\tab\tab //board stuff\par
+\tab\tab board_updt();\par
+\tab\tab //output\par
+\tab\tab print_vision();\par
+\tab\tab //check if the adv. is dead\par
+\tab\tab if(chk_death()==true)\{\par
+\tab\tab\tab break;\par
+\tab\tab\}\par
+\tab\}\par
+\tab end();\par
+\tab endwin();\par
+\tab return 0;\par
+\}\par
+}
+ 

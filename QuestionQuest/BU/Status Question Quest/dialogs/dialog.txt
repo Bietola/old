@@ -1,0 +1,102 @@
+Baggio{
+	TEXT[Hello friend! I am Baggio, keeper of the things of doom! It is nice to meet you.]
+	TEXT[How should I help you?]
+	LINKS{
+		TITLE[I would like to kill you, sir.]{
+			TEXT[Then challenge me! I just hope you studied your philosophy over night...]
+			RET[BATTLE]
+		}
+		TITLE[I would like a quest.]{
+			IF[QUEST1]{
+				TEXT[another one! well then, I see you'll starting to appreciate working for me.]
+				YOUTEXT[I just have nothing to do, so...]
+				TEXT[I understand... how about this:...]
+				RET[QUEST2]
+			}
+			ELSE{
+				TEXT[I indeed have a quest for you!]
+				RET[QUEST1]
+			}
+		}
+		TITLE[I'm hungry...]{
+			TEXT[The true philosopher placates his hunger with the power of knowledge!]
+			LINKS{
+				TITLE[ok then...]{
+					TEXT[very well; good bye!]
+				}
+				TITLE[I don't think that would work...]{
+					TEXT[I see... Here's some bread, then.]
+					RET[GIVE_BREAD]
+				}
+				TITLE[I guess philosophers had a really big brain and a really small appetite...]{
+					TEXT[How dare you insult philosophers!]
+					YOUTEXT[hum... I didn't really "insult philosophers", calm down...]
+					TEXT[Never! You foul creature, I challenge thee to a duel!]
+					YOUTEXT[Thee? Duel? Where are we, in medieval times?]
+					TEXT[Silence! I will, hum... Just shut up and challenge me.]
+					RET[BATTLE]
+				}
+			}
+		}
+		LOCKED[QUEST1]:TITLE[I have the tail.]{
+			TEXT[good job! Good job indeed...]
+			TEXT[here's your reward]
+			RET[REWARD1]
+		}
+	}
+}
+
+crazy_old_man{
+	RAND[50,50]{
+		TEXT[I like unicorns!]
+	}{
+		TEXT[I like potatoes when they're good! Do you like 'em, too?]
+		LINKS{
+			TITLE[hum... yes, I guess...]{
+				TEXT[me too, me too!!! he he he!]
+				YOUTEXT[ok...]
+			}
+			TITLE[well of course I do, old man!]{
+				TEXT[me not old man... you mean guy]
+				YOUTEXT[sorry...]
+				TEXT[he he he!]
+				YOUTEXT[that's how I like you, old man!]
+				TEXT[old man, old man, old man, oooooooooold maaaaaaan!!!]
+				YOUTEXT[yhei! old man!]
+			}
+			TITLE[if they're good how would anybody not like them?]{
+				RAND[50,45,5]{
+					TEXT[...]
+					YOUTEXT[you ok?]
+					TEXT[...]
+					YOUTEXT[hello?]
+					TEXT[...]
+					TEXT[.................]
+					YOUTEXT[Well, the concept must have been too difficult for his mind to b.....]
+					TEXT[BAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHH!!!!!!!!!!!]
+					YOUTEXT[WHAT THE?!?]
+					TEXT[POTATOES!!!]
+					TEXT[ARE!!!]
+					TEXT[GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOD!!!!!]
+					YOUTEXT[I guess you'll never stop surprising me, old man.]
+					TEXT[popopopotatotoestotoespotatotopotatoes.....]
+				}{
+					TEXT[well, maybe they're good to me, but not to you, dumbass]
+					YOUTEXT[You could say that, but then again... wait, what did you just call me?!]
+					TEST[dumbass!]
+					YOUTEXT[You say that one more time!]
+					TEXT[dumb]
+					TEXT[ass]
+					TEXT[dumbass, dumbass, dumbass!!]
+					YOUTEXT[You know what, I'm done talking to you, good bye.]
+					TEXT[Goodbye, dumbass.]
+					YOUTEXT[...]
+					TEXT[he he he!]
+				}{
+					TEXT[WIP]
+				}
+		}
+	}
+}
+
+END

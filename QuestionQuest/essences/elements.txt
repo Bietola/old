@@ -1,0 +1,9 @@
+ESSENCE		BONUSES
+---------------------------------------------:
+WATER		[ FIRE 50 EARTH -50 ]
+FIRE		[ WATER -50 AIR -50 EARTH 50 ]
+AIR		[ FIRE 50 ]
+EARTH		[ FIRE -50 ]
+FUSION		[ FIRE 10 EARTH 10 WATER 10 AIR 10 ]
+
+END

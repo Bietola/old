@@ -1,0 +1,12 @@
+ID		NAME		SINVERB	PLVERB	ESS			QESS		QEFF		QDIF	MAN	ACT	SELFEFF		ENEEFF		AGI	CHANCE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------:
+punch		punch		punches	punch	[ FORCE PAIN ]		[ ]		[ ]		0	0	[ DAM ]	[ DAM M 1.2 ]	[ ]		-1	100
+[punches the enemy! Basic, but reliable. Adapts to agi.]
+
+learn		learn		learns	learn	[ MIND ]		[ OPT ALL ]	[ NOMANA ]	1	10	[ ]	[ DAM B 1.2 ]	[ ]		0	100
+[attempts to learn the enemy's weak point, increasing attack permanently if sucessfull. Blocked by a high INT and SRT.]
+ 
+impale		impale		impales	impale	[ FORCE PAIN ]		[ OPT MATH ]	[ DAM M 1.2 ]	20	5	[ DAM ]	[ ]		[ DEF B 0.8 ]	40	100
+[impales an enemy, hurting him and decreasing its defense.]
+
+END

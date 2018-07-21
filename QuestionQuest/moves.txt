@@ -1,0 +1,45 @@
+ID		NAME		SINVERB		PLVERB	QESS		QDIF	MAN	ACT		AGI	CHANCE
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:
+punch		punch		punches		punch	[ ]		0	0	[ DAM ]		-1	100
+[.]
+[DUR(A);ATT(1.2).]
+[.]
+[punches the enemy! Basic, but reliable. Adapts to agi.]
+
+learn		learn		learns		learn	[ Q_OPT Q_ALL ]	1	10	[ ]		0	100
+[DUR(T,1);NMN(1).]
+[DUR(B);ATT(1.2);DEF(1.1);DES(additional power derived from a deeper strategical understanding of the enemy).]
+[.]
+[attempts to learn the enemy's weak point, increasing attack permanently if sucessfull. Blocked by a high INT and SRT.]
+ 
+impale		impale		impales		impale	[ Q_OPT MATH ]	1	5	[ DAM ]		40	100
+[.]
+[DUR(A);ATT(1.2).]
+[DUR(B);DEF(0.8).]
+[impales an enemy, hurting him and decreasing its defense.]
+
+confuse 	confuse		confuses	confuse	[ ]		0	3	[ ]		0	100
+[.]
+[.]
+[DUR(B);DEF(0.5).]
+[confuses the enemy, greatly decreasing its defence]
+
+canna		canna		drugs		drug	[ ]		0	3	[ ]		0	100
+[.]
+[DUR(T,3);AGI(2.0);ATT(1.1);DEF(0.75);NAM(high);DES(side effects of an whole afternoon spent smoking weed...).]
+[.]
+[smokes some pot... temporarly increasing agility and damage at the cost of coordination (defence).]
+
+cure1		cure		cures		cure	[ MEDICINE ]	1	2	[ ]		0	100
+[DUR(T,1);REG(5).]
+[DUR(T,3);REG(2);NAM(regeneration);DES(slowly regenerates health over time.).]
+[.]
+[basic medical procedure for attending wounds.]
+
+bubu		bubu		bubus		bubu	[ MEDICINE ]	1	4	[ ]		0	100
+[DUR(T,1);REG(2).]
+[DUR(T,3);REG(2);NAM(regeneration);DES(slowly regenerates health over time.).]
+[DUR(T,3);REG(0.5).]
+[causes a wound on the enemy, gradually decreasing its health. If executed masterfully, this move could also be used to cure the user's wounds.]
+
+END

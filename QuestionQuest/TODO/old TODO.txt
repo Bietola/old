@@ -1,0 +1,15 @@
+-Make wear effects be removed when an item is unequipped
+-Make effect and inventory list show up in game when a given command is pressed
++Add an essence system
+	OR) complex soul/spirit/wisps system
+	OR) simple essence vector system
++adjust map size and level generation
++Add quest items and quests
++Add some characters and stories
+OPT) make body system better and less confusing in code
++"publish game" on sourceforge (and try to erase previously published shitty game...)
++Wait for feedback
+ICOFB) organize code
+ICOMFB) make other characters and stories
+ICOEMFB) add main story
+ICOALOFB) make modding a better place...

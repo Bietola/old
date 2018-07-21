@@ -1,0 +1,39 @@
+questions
+------------------------------------------------------:
+
+:MATH 1
+What is 2+2?
+[0 1]
+[0 2]
+[0 3]
+[1 4]
+
+:SCIENCE 1
+What are the two veins that bring deoxydated blood to the heart called?
+[0 deoxidation veins]
+[1 right and left vene cave]
+[0 right and left giugular veins]
+[0 rock n' roll veins]
+
+:PHILOSOPHY 1
+Who invented the sillogism?
+[1 Aristotele]
+[0 Platone]
+[0 Kant]
+[0 Cartesio]
+
+:MATH 1
+What is pi?
+[0 a constant that has to do with circles...]
+[1 the ratio of a circle's circumference and its diameter]
+[0 the ratio of a circle's diameter and its circumference]
+[0 the base of a square which has the same area as a circle]
+
+:SCIENCE 1
+How many moons does Pluto have?
+[0 1]
+[0 7]
+[1 5]
+[0 3]
+
+:END

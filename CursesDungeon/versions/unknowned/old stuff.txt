@@ -1,0 +1,317 @@
+/*
+Programmatore       :
+Programma           :
+Descrizione         :
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
+#include <time.h>
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int j,k,x,y,vx,vy,ax,ay,mx,my,xmill;
+int aatt,ahp;
+char com;
+int mvx=32; //max=78
+int mvy=17; //max=20
+int maxx=100;
+int maxy=100;
+char ground[100][100];
+char item  [100][100];
+char life  [100][100];
+int  status[100][100][3];
+
+// status[x][y][0] 1 -> character
+// status[x][y][0] 2 -> enemy
+// status[x][y][0] 3 -> friend
+
+// status[x][y][1] n -> attack
+// status[x][y][2] n -> HP
+
+//controlls:
+char c_N =72;
+char c_NE=71;
+char c_E =75;
+char c_SE=79;
+char c_S =80;
+char c_SO=81;
+char c_O =77;
+char c_NO=73;
+
+//technical stuff
+char t_null=0;
+
+//graphics
+char g_light='.';
+char g_wall =177;
+char g_tree =  5;
+
+//life (entities)
+char l_adv='@';
+char l_slime='s';
+char l_creeper='c';
+
+void setAtt(int xx,int yy,int n){
+	status[xx][yy][1]=n;
+}
+
+void setHP(int xx,int yy,int n){
+	status[xx][yy][2]=n;
+}
+
+void spawn(char gra,/*string nam,*/int xx,int yy,int fn,int att,int hp){
+	life[xx][yy]=gra;
+	status[xx][yy][0]=fn;
+	status[xx][yy][1]=att;
+	status[xx][yy][2]=hp;
+}
+
+void despawn(int xx,int yy){
+	life[xx][yy]=t_null;
+    for (j=0;j<3;j++) status[xx][yy][j]=t_null;
+}
+
+void generate_g(){
+	for(y=maxy-1;y>=0;y--){
+		for(x=maxx-1;x>=0;x--){
+			xmill=rand()%1000;
+			if(xmill<750) ground[x][y]=g_light;
+			if(xmill>=750 && xmill<985) ground[x][y]=g_wall;
+			if(xmill>=985) ground[x][y]=g_tree;
+		}
+	}
+}
+
+void start_game(){
+	//start random seed
+	srand(time(NULL));
+	//reset
+	for(y=maxy-1;y>=0;y--){
+		for(x=maxx-1;x>=0;x--){
+			ground[x][y]=t_null;
+			item  [x][y]=t_null;
+			life  [x][y]=t_null;
+			//reset status
+			for(j=0;j<3;j++) status[x][y][j]=t_null;
+		}
+	}
+	generate_g();
+	//spawn character
+	j=0;
+	for(y=maxy/2;y>=0;y--){
+		for(x=maxx/2;x>=0;x--){
+			if(ground[x][y]==g_light){
+				aatt=1;
+				ahp=10;
+				spawn(l_adv,x,y,1,aatt,ahp);
+				//ini. ax & ay
+				ax=x;
+				ay=y;
+				//ini. vx & vy
+				vx=mvx/2+x;
+				vy=mvy/2+y;
+				j=1;
+			}
+			if(j==1) break;
+		}
+		if(j==1) break;
+	}
+}
+
+void i_spawn_m(){
+	//spawns monsters (made to be used one time only)
+    for(y=maxy-1;y>=0;y--){
+		for(x=maxx-1;x>=0;x--){
+			xmill=rand()%300;
+			if(ground[x][y]==g_light){
+				if(xmill==0){
+					xmill=rand()%100;
+                	if(xmill<=75) spawn(l_slime,x,y,2,1,5);
+					if(xmill> 75) spawn(l_creeper,x,y,2,3,12);
+				}
+			}
+		}
+	}
+}
+
+void spawn_m(){
+	//spawns monsters (made to be used continusly)
+   	for(y=0;y<mvy;y++){
+		for(x=0;x<mvx;x++){
+			xmill=rand()%1000000000;
+			if(ground[vx-x][vy-y]==g_light){
+				if(xmill==0){
+					xmill=rand()%100;
+                	if(xmill<=75) life[vx-x][vy-y]=l_slime;
+					if(xmill> 75) life[vx-x][vy-y]=l_creeper;
+				}
+			}
+		}
+	}
+}
+
+void print_vision(){
+	system("cls");
+	//print board
+   	for(y=0;y<mvy;y++){
+        cout<<"\n ";
+		for(x=0;x<mvx;x++){
+			//game-screen
+			if(life[vx-x][vy-y]!=t_null) cout<<life[vx-x][vy-y];
+			else if(item[vx-x][vy-y]!=t_null) cout<<item[vx-x][vy-y];
+			else cout<<ground[vx-x][vy-y];
+			//attributes
+			if(x==mvx-1){
+				if(y==0) cout<<"\tATT = "<<aatt<<"\tATTx = "<<status[x][y][1];
+				if(y==1) cout<<"\tHP  = "<<ahp <<"\tHPx  = "<<status[x][y][2];
+			}
+		}
+	}
+	//altro
+	cout<<"\n\ncoos:  "<<ax<<";"<<ay<<"\n\nlast com:  ";
+	printf("%c (%d)",com,com);
+}
+
+void adv_move(){
+    despawn(ax,ay);
+	mx=ax;
+	my=ay;
+	if(com==c_N){
+		//change adv. coos
+		ay++;
+		//move adv. vision & check if adv. can move
+		if(ground[ax][ay]==g_light){
+			if (ay<maxy-mvy/2 && ay>mvy/2) vy++;
+		}
+		else{
+			ax=mx;
+			ay=my;
+		}
+	}
+	if(com==c_NE){
+		//change adv. coos
+		ay++;
+		ax++;
+		//move adv. vision & check if adv. can move
+		if(ground[ax][ay]==g_light){
+			if(ay<maxy-mvy/2 && ay>mvy/2) vy++;
+			if(ax<maxx-mvx/2 && ax>mvx/2-1) vx++;
+		}
+		else{
+			ax=mx;
+			ay=my;
+		}
+	}
+	if(com==c_E){
+		//change adv. coos
+		ax++;
+		//move adv. vision & check if adv. can move
+		if(ground[ax][ay]==g_light){
+			if(ax<maxx-mvx/2 && ax>mvx/2-1) vx++;
+		}
+		else{
+			ax=mx;
+			ay=my;
+		}
+	}
+	if(com==c_SE){
+		//change adv. coos
+		ay--;
+		ax++;
+		//move adv. vision & check if adv. can move
+		if(ground[ax][ay]==g_light){
+			if(ay>mvy/2-1 && ay<maxy-mvy/2-1) vy--;
+			if(ax<maxx-mvx/2 && ax>mvx/2-1) vx++;
+		}
+		else{
+			ax=mx;
+			ay=my;
+		}
+	}
+	if(com==c_S){
+		//change adv. coos
+		ay--;
+		//move adv. vision & check if adv. can move
+		if(ground[ax][ay]==g_light){
+			if(ay>mvy/2-1 && ay<maxy-mvy/2-1) vy--;
+		}
+		else{
+			ax=mx;
+			ay=my;
+		}
+	}
+	if(com==c_SO){
+		//change adv. coos
+		ay--;
+		ax--;
+		//move adv. vision & check if adv. can move
+		if(ground[ax][ay]==g_light){
+			if(ay>mvy/2-1 && ay<maxy-mvy/2-1) vy--;
+			if(ax>mvx/2-2 && ax<maxx-mvx/2-1) vx--;
+		}
+		else{
+			ax=mx;
+			ay=my;
+		}
+	}
+	if(com==c_O){
+		//change adv. coos
+		ax--;
+		//move adv. vision & check if adv. can move
+		if(ground[ax][ay]==g_light){
+			if(ax>mvx/2-2 && ax<maxx-mvx/2-1) vx--;
+		}
+		else{
+			ax=mx;
+			ay=my;
+		}
+	}
+	if(com==c_NO){
+		//change adv. coos
+		ay++;
+		ax--;
+		//move adv. vision & check if adv. can move
+		if(ground[ax][ay]==g_light){
+			if(ay<maxy-mvy/2 && ay>mvy/2) vy++;
+			if(ax>mvx/2-2 && ax<maxx-mvx/2-1) vx--;
+		}
+		else{
+			ax=mx;
+			ay=my;
+		}
+	}
+	spawn(l_adv,ax,ay,1,aatt,ahp);
+}
+
+void adv_att(){
+	
+}
+
+void end(){
+	while(true) if(kbhit()) break;
+}
+
+int main()
+{
+	start_game();
+	print_vision();
+	i_spawn_m();
+	//input
+	while(true){
+		while(true) if(kbhit()){
+			com=getch();
+			break;
+		}
+		//move or attack with all entities in board
+		//adv.
+		adv_move();
+		print_vision();
+	}
+	end();
+	return 0;
+}

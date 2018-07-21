@@ -1,0 +1,23 @@
+name		gender	role
+---------------------------:
+stefano		MALE	USER
+chicco		MALE	USER
+tina		FEMALE	USER
+roosvelt	MALE	CPU
+sofi		FEMALE	CPU
+adolfa		FEMALE	CPU
+atena		FEMALE	CPU
+batman		MALE	CPU
+gigante		MALE	CPU
+chief		MALE	CPU
+sherlock	MALE	CPU
+mara		FEMALE	CPU
+davide		MALE	CPU
+milli		FEMALE	CPU
+nonnochuck	MALE	CPU
+jelly		NEUTRAL	CPU
+knuckles	MALE	CPU
+speakman	MALE	CPU
+daniele		MALE	CPU
+steve		MALE	CPU
+richard		MALE	CPU

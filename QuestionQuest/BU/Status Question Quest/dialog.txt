@@ -1,0 +1,159 @@
+idiot {
+	TEXT [Hello!]
+	LINKS {
+		TITLE [Hello there!]{
+			TEXT [I hate you.]
+			YOUTEXT [But why?]
+			TEXT [you ugly.]
+			YOUTEXT [well, I hate you, too]
+			TEXT [yhei!]
+			LINKS {
+				TITLE [I hate you a lot.]{
+					TEXT [me too!]
+				}
+			}
+		}
+		TITLE [Are you an idiot?]{
+			TEXT [Why, yes. I indeed am an idiot.]
+			YOUTEXT [Good to know.]
+		}
+		TITLE [Do you have a potato?]{
+			TEXT [of course I do! Here, take it]
+			YOUTEXT [thanks.]
+			RET [GIVE_POTATO]
+		}
+		TITLE [I challnge thee to a duel!]{
+			TEXT [Who's thee?]
+			YOUTEXT [You.]
+			TEXT [I'm an idiot.]
+			YOUTEXT [I know. Anyways, DIE!!!]
+			RET [BATTLE]
+		}
+
+	}
+}END
+
+crazy_old_man {
+	TEXT [I like potatoes when they're good! Do you like 'em, too?]
+	LINKS {
+		TITLE [Hum... yes, I guess...]{
+			TEXT [Me too, me too!!! he he he!]
+			YOUTEXT [Ok...]
+		}
+		TITLE [Well of course I do, old man!]{
+			TEXT [Me not old man... you mean guy]
+			YOUTEXT [Sorry...]
+			TEXT [he he he!]
+			YOUTEXT [That's how I like you, old man!]
+			TEXT [old man, old man, old man, oooooooooold maaaaaaan!!!]
+			YOUTEXT [yhei! old man!]
+		}
+		TITLE [If they're good how would anybody not like them?]{
+			TEXT [...]
+			YOUTEXT [You ok?]
+			TEXT [...]
+			YOUTEXT [Hello?]
+			TEXT [...]
+			TEXT [.................]
+			YOUTEXT [Well, the concept must have been too difficult for his mind to b.....]
+			TEXT [BAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHH!!!!!!!!!!!]
+			YOUTEXT [WHAT THE?!?]
+			TEXT [POTATOES!!!]
+			TEXT [ARE!!!]
+			TEXT [GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOD!!!!!]
+			YOUTEXT [I guess you'll never stop surprising me, old man.]
+			TEXT [popopopotatotoestotoespotatotopotatoes.....]
+		}
+		TITLE [everyone likes likes them if they're good!]{
+			TEXT [well, maybe they're good to me, but not to you, dumbass]
+			YOUTEXT [You could say that, but then again... wait, what did you just call me?!]
+			TEXT [dumbass!]
+			YOUTEXT [You say that one more time!]
+			TEXT [dumb]
+			TEXT [ass]
+			TEXT [dumbass, dumbass, dumbass!!]
+			YOUTEXT [You know what, I'm done talking to you, good bye.]
+			TEXT [Goodbye, dumbass.]
+			YOUTEXT [...]
+			TEXT [he he he!]
+		}
+	}
+}END
+
+baggio {
+	TEXT [Hello there, student!]
+	TEXT [I am, hum, Baggio.]
+	LINKS {
+		TITLE [INTERUPT: I don't care who you are and I'm not your student. Now shut up and tell where the hell I am!]{
+			TEXT [wip]
+		}
+		TITLE [make him continue talking.]{
+			TEXT [Professor of Philosophy...]
+			TEXT [...protector of Plato's Left Shoe...]
+			TEXT [...and giver of quests...]
+			TEXT [How may I be of service to you?]
+			LINKS {
+				TITLE [Let's talk about philosophy...]{
+					TEXT [WIP]
+				}
+				TITLE [Plato's left what now?]{
+					TEXT [I know it might sound, hum, confusing at first.]
+					TEXT [But every quest giver in this land has been given...]
+					TEXT [...the task to guard part of a sacred armour...]
+					TEXT [...if you're interested in wearing such powerful and uNpredictable items...]
+					TEXT [...which you should absolutely not be interested in...]
+					TEXT [...you'll have to challenge me...]
+					LINKS {
+						TITLE [WIP]{
+							TEXT [WIP]
+						}
+					}
+				}
+				TITLE [I would like a quest
+		}
+	}
+}END
+
+frank {
+	TEXT [Hey there adventurer!]
+	YOUTEXT [I'm not an adventurer...]
+	TEXT [Then why do you have a sword?]
+	YOUTEXT [I don't have a... what the!?]
+	YOUTEXT [Why am I holding a sword all of the sudden?]
+	TEXT [That's what I just asked YOU genius!]
+	LINKS {
+		TITLE [You know what, I'm tired of being insulted by everyone I meet! Now tell me EXACTLY where I am and what happened to me or I'll have to give this sword a try...]{
+			TEXT [Well, well! I guess you don't have a very strong sense of humour...]
+			TEXT [WIP]
+		}
+		TITLE [You know what, just forget it. Anyway, you're Frank, right? Don't you have a quest for me or something?]{
+			TEXT [A...]
+			TEXT [...quest for you?]
+			TEXT [HAHAHAHAHAHAHAHAHAHAHA!!!]
+			YOUTEXT [What's so funny?]
+			TEXT [Nothing, hahaha! Just, hahaha! Let me recover for a while will ya'? HAHAHAHA! ONE! QUEST! HAHAHA!]
+			YOUTEXT [...]
+			TEXT [Ok, ok, I'm done, I'm ok...]
+			TEXT [hehe... quest... one...]
+			TEXT [So, clearly nobody has ever even given you a single clue on how it works around here, right?]
+			TEXT [I, as many others who inhabit these lands, am a quest maker]
+			TEXT [WIP]
+		}
+	}
+}END
+
+quest_giver : QUESTMAKER {
+	TEXT [Would you like a quest?]
+	LINKS {
+		TITLE [Yes I would!]{
+			TEXT [Here you go then!]
+			RET [GIVE_RAND_QUEST 1]
+		}
+		TITLE [No, thanks.]{
+			TEXT [Ok, then...]
+			TEXT [Good bye!]
+		}
+	}
+}END
+
+END

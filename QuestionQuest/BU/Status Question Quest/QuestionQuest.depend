@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1438518532 source:c:\users\stefano\documents\programmi\c\curses\old questionquest\menu.cpp
+	"menu.h"
+
+1438518532 c:\users\stefano\documents\programmi\c\curses\old questionquest\menu.h
+	<stdarg.h>
+	<curses.h>
+	<string.h>
+	"palette.h"
+	"memutils.h"
+
+1431953492 c:\users\stefano\documents\programmi\c\curses\old questionquest\palette.h
+	<stdlib.h>
+	<time.h>
+	<curses.h>
+
+1431462141 c:\users\stefano\documents\programmi\c\curses\old questionquest\memutils.h
+	<stdlib.h>
+	<string.h>
+
+1451153462 source:c:\users\stefano\documents\programmi\c\curses\old questionquest\main.cpp
+	<cassert>
+	<cstring>
+	<curses.h>
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<vector>
+	<algorithm>
+	"menu.h"
+	"palette.h"
+

@@ -1,0 +1,605 @@
+# depslib dependency file v1.0
+1435317946 source:c:\users\stefano\documents\programmi\c\curses\ktb\bar.cpp
+	"bar.h"
+
+1435317946 c:\users\stefano\documents\programmi\c\curses\ktb\bar.h
+	<string.h>
+	<curses.h>
+	"palette.h"
+
+1435154970 c:\users\stefano\documents\programmi\c\curses\ktb\palette.h
+	<stdlib.h>
+	<time.h>
+	<curses.h>
+
+1435317066 source:c:\users\stefano\documents\programmi\c\curses\ktb\comments.cpp
+	"comments.h"
+
+1435317066 c:\users\stefano\documents\programmi\c\curses\ktb\comments.h
+	<string.h>
+	<curses.h>
+	"memutils.h"
+	"palette.h"
+
+1434917168 c:\users\stefano\documents\programmi\c\curses\ktb\memutils.h
+	<stdlib.h>
+	<string.h>
+
+1435653393 source:c:\users\stefano\documents\programmi\c\curses\ktb\creature.cpp
+	"Creature.h"
+	"ShipBuilding.h"
+
+1435654451 c:\users\stefano\documents\programmi\c\curses\ktb\creature.h
+	<string>
+	<sstream>
+	"comments.h"
+	"Thing.h"
+
+1435495795 c:\users\stefano\documents\programmi\c\curses\ktb\thing.h
+	<vector>
+	"menu.h"
+	"utils.h"
+
+1436168453 c:\users\stefano\documents\programmi\c\curses\ktb\menu.h
+	<stdarg.h>
+	<curses.h>
+	<string.h>
+	"palette.h"
+	"memutils.h"
+
+1446979669 c:\users\stefano\documents\programmi\c\curses\ktb\utils.h
+	<string>
+	<cstdlib>
+	<curses.h>
+	"palette.h"
+
+1446981220 c:\users\stefano\documents\programmi\c\curses\ktb\shipbuilding.h
+	<sstream>
+	"bar.h"
+	"Timer.h"
+	"Thing.h"
+	"Person.h"
+	"Item.h"
+	"utils.h"
+
+1435150814 c:\users\stefano\documents\programmi\c\curses\ktb\timer.h
+	<ctime>
+
+1435486588 c:\users\stefano\documents\programmi\c\curses\ktb\person.h
+	<string>
+	<sstream>
+	<cstdlib>
+	<ctime>
+	<curses.h>
+	"comments.h"
+	"names.h"
+	"utils.h"
+	"Creature.h"
+
+1434993629 c:\users\stefano\documents\programmi\c\curses\ktb\names.h
+	<string>
+	<fstream>
+	<cstdlib>
+
+1435654241 c:\users\stefano\documents\programmi\c\curses\ktb\item.h
+	<string>
+	<sstream>
+	<curses.h>
+	"palette.h"
+	"Thing.h"
+
+1435484238 source:c:\users\stefano\documents\programmi\c\curses\ktb\item.cpp
+	"Item.h"
+
+1435317417 source:c:\users\stefano\documents\programmi\c\curses\ktb\main.cpp
+	<string>
+	<vector>
+	<curses.h>
+	<cstdlib>
+	<ctime>
+	"palette.h"
+	"menu.h"
+	"Player.h"
+	"Place.h"
+
+1435407462 c:\users\stefano\documents\programmi\c\curses\ktb\player.h
+	<string>
+	<vector>
+	"menu.h"
+	"Ship.h"
+	"Person.h"
+
+1435781821 c:\users\stefano\documents\programmi\c\curses\ktb\ship.h
+	<string>
+	<vector>
+	"Thing.h"
+	"ShipBuilding.h"
+
+1435654451 c:\users\stefano\documents\programmi\c\curses\ktb\place.h
+	<string>
+	<sstream>
+	<vector>
+	"names.h"
+	"utils.h"
+	"menu.h"
+	"Ship.h"
+	"ships.h"
+	"Merchant.h"
+
+1435587023 c:\users\stefano\documents\programmi\c\curses\ktb\ships.h
+	"Ship.h"
+	"ShipContr.h"
+
+1437496556 c:\users\stefano\documents\programmi\c\curses\ktb\shipcontr.h
+	<ctime>
+	"menu.h"
+	"comments.h"
+	"bar.h"
+	"Ship.h"
+	"Person.h"
+
+1435585527 c:\users\stefano\documents\programmi\c\curses\ktb\merchant.h
+	<vector>
+	"menu.h"
+	"utils.h"
+	"Thing.h"
+	"Player.h"
+	"Ship.h"
+	"ships.h"
+	"ShipBuilding.h"
+	"Person.h"
+
+1434917168 source:c:\users\stefano\documents\programmi\c\curses\ktb\memutils.cpp
+	"memutils.h"
+
+1436168453 source:c:\users\stefano\documents\programmi\c\curses\ktb\menu.cpp
+	"menu.h"
+
+1446980245 source:c:\users\stefano\documents\programmi\c\curses\ktb\merchant.cpp
+	"Merchant.h"
+
+1435136224 source:c:\users\stefano\documents\programmi\c\curses\ktb\names.cpp
+	"names.h"
+	"utils.h"
+
+1435154970 source:c:\users\stefano\documents\programmi\c\curses\ktb\palette.cpp
+	"palette.h"
+
+1435345572 source:c:\users\stefano\documents\programmi\c\curses\ktb\person.cpp
+	"Person.h"
+	"ShipBuilding.h"
+
+1438463981 source:c:\users\stefano\documents\programmi\c\curses\ktb\place.cpp
+	"Place.h"
+	"Player.h"
+
+1435407453 source:c:\users\stefano\documents\programmi\c\curses\ktb\player.cpp
+	"Player.h"
+	"Place.h"
+
+1435773909 source:c:\users\stefano\documents\programmi\c\curses\ktb\shipbuilding.cpp
+	"ShipBuilding.h"
+	"Ship.h"
+
+1437496509 source:c:\users\stefano\documents\programmi\c\curses\ktb\shipcontr.cpp
+	"ShipContr.h"
+	"Ship.h"
+
+1435316960 source:c:\users\stefano\documents\programmi\c\curses\ktb\ships.cpp
+	"ships.h"
+
+1435150491 source:c:\users\stefano\documents\programmi\c\curses\ktb\timer.cpp
+	"Timer.h"
+
+1435409039 source:c:\users\stefano\documents\programmi\c\curses\ktb\uilts.cpp
+	"utils.h"
+
+1446981754 source:c:\users\stefano\documents\programmi\c\curses\ktb\ship.cpp
+	"Ship.h"
+
+1472212224 source:c:\code\c\curses\ktb\bar.cpp
+	"bar.h"
+
+1472210022 c:\code\c\curses\ktb\bar.h
+	<assert.h>
+	<string.h>
+	<curses.h>
+	"palette.h"
+
+1435162170 c:\code\c\curses\ktb\palette.h
+	<stdlib.h>
+	<time.h>
+	<curses.h>
+
+1435324266 source:c:\code\c\curses\ktb\comments.cpp
+	"comments.h"
+
+1435324266 c:\code\c\curses\ktb\comments.h
+	<string.h>
+	<curses.h>
+	"memutils.h"
+	"palette.h"
+
+1434924368 c:\code\c\curses\ktb\memutils.h
+	<stdlib.h>
+	<string.h>
+
+1435660594 source:c:\code\c\curses\ktb\creature.cpp
+	"Creature.h"
+	"ShipBuilding.h"
+
+1435661652 c:\code\c\curses\ktb\creature.h
+	<string>
+	<sstream>
+	"comments.h"
+	"Thing.h"
+
+1435502996 c:\code\c\curses\ktb\thing.h
+	<vector>
+	"menu.h"
+	"utils.h"
+
+1436175654 c:\code\c\curses\ktb\menu.h
+	<stdarg.h>
+	<curses.h>
+	<string.h>
+	"palette.h"
+	"memutils.h"
+
+1496223267 c:\code\c\curses\ktb\utils.h
+	<string>
+	<cstdlib>
+	<curses.h>
+	"palette.h"
+
+1496222695 c:\code\c\curses\ktb\shipbuilding.h
+	<sstream>
+	"bar.h"
+	"Timer.h"
+	"Thing.h"
+	"Person.h"
+	"Item.h"
+	"utils.h"
+
+1435158014 c:\code\c\curses\ktb\timer.h
+	<ctime>
+
+1435493788 c:\code\c\curses\ktb\person.h
+	<string>
+	<sstream>
+	<cstdlib>
+	<ctime>
+	<curses.h>
+	"comments.h"
+	"names.h"
+	"utils.h"
+	"Creature.h"
+
+1435000830 c:\code\c\curses\ktb\names.h
+	<string>
+	<fstream>
+	<cstdlib>
+
+1435661442 c:\code\c\curses\ktb\item.h
+	<string>
+	<sstream>
+	<curses.h>
+	"palette.h"
+	"Thing.h"
+
+1435491438 source:c:\code\c\curses\ktb\item.cpp
+	"Item.h"
+
+1435324618 source:c:\code\c\curses\ktb\main.cpp
+	<string>
+	<vector>
+	<curses.h>
+	<cstdlib>
+	<ctime>
+	"palette.h"
+	"menu.h"
+	"Player.h"
+	"Place.h"
+
+1435414662 c:\code\c\curses\ktb\player.h
+	<string>
+	<vector>
+	"menu.h"
+	"Ship.h"
+	"Person.h"
+
+1472210448 c:\code\c\curses\ktb\ship.h
+	<string>
+	<sstream>
+	<vector>
+	"Thing.h"
+	"ShipBuilding.h"
+
+1435661652 c:\code\c\curses\ktb\place.h
+	<string>
+	<sstream>
+	<vector>
+	"names.h"
+	"utils.h"
+	"menu.h"
+	"Ship.h"
+	"ships.h"
+	"Merchant.h"
+
+1435594224 c:\code\c\curses\ktb\ships.h
+	"Ship.h"
+	"ShipContr.h"
+
+1437503756 c:\code\c\curses\ktb\shipcontr.h
+	<ctime>
+	"menu.h"
+	"comments.h"
+	"bar.h"
+	"Ship.h"
+	"Person.h"
+
+1435592728 c:\code\c\curses\ktb\merchant.h
+	<vector>
+	"menu.h"
+	"utils.h"
+	"Thing.h"
+	"Player.h"
+	"Ship.h"
+	"ships.h"
+	"ShipBuilding.h"
+	"Person.h"
+
+1434924368 source:c:\code\c\curses\ktb\memutils.cpp
+	"memutils.h"
+
+1471649792 source:c:\code\c\curses\ktb\menu.cpp
+	"menu.h"
+
+1446983846 source:c:\code\c\curses\ktb\merchant.cpp
+	"Merchant.h"
+
+1435143424 source:c:\code\c\curses\ktb\names.cpp
+	"names.h"
+	"utils.h"
+
+1435162170 source:c:\code\c\curses\ktb\palette.cpp
+	"palette.h"
+
+1435352772 source:c:\code\c\curses\ktb\person.cpp
+	"Person.h"
+	"ShipBuilding.h"
+
+1472212272 source:c:\code\c\curses\ktb\place.cpp
+	"Place.h"
+	"Player.h"
+
+1435414654 source:c:\code\c\curses\ktb\player.cpp
+	"Player.h"
+	"Place.h"
+
+1496222695 source:c:\code\c\curses\ktb\ship.cpp
+	"Ship.h"
+
+1472211640 source:c:\code\c\curses\ktb\shipbuilding.cpp
+	"ShipBuilding.h"
+	"Ship.h"
+
+1437503710 source:c:\code\c\curses\ktb\shipcontr.cpp
+	"ShipContr.h"
+	"Ship.h"
+
+1435324160 source:c:\code\c\curses\ktb\ships.cpp
+	"ships.h"
+
+1435157692 source:c:\code\c\curses\ktb\timer.cpp
+	"Timer.h"
+
+1435416240 source:c:\code\c\curses\ktb\uilts.cpp
+	"utils.h"
+
+1472208624 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\bar.cpp
+	"bar.h"
+
+1472206422 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\bar.h
+	<assert.h>
+	<string.h>
+	<curses.h>
+	"palette.h"
+
+1435158570 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\palette.h
+	<stdlib.h>
+	<time.h>
+	<curses.h>
+
+1435320666 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\comments.cpp
+	"comments.h"
+
+1435320666 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\comments.h
+	<string.h>
+	<curses.h>
+	"memutils.h"
+	"palette.h"
+
+1434920768 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\memutils.h
+	<stdlib.h>
+	<string.h>
+
+1435656994 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\creature.cpp
+	"Creature.h"
+	"ShipBuilding.h"
+
+1435658052 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\creature.h
+	<string>
+	<sstream>
+	"comments.h"
+	"Thing.h"
+
+1435499396 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\thing.h
+	<vector>
+	"menu.h"
+	"utils.h"
+
+1436172054 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\menu.h
+	<stdarg.h>
+	<curses.h>
+	<string.h>
+	"palette.h"
+	"memutils.h"
+
+1472205302 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\utils.h
+	<string>
+	<cstdlib>
+	<curses.h>
+	"palette.h"
+
+1446984820 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\shipbuilding.h
+	<sstream>
+	"bar.h"
+	"Timer.h"
+	"Thing.h"
+	"Person.h"
+	"Item.h"
+	"utils.h"
+
+1435154414 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\timer.h
+	<ctime>
+
+1435490188 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\person.h
+	<string>
+	<sstream>
+	<cstdlib>
+	<ctime>
+	<curses.h>
+	"comments.h"
+	"names.h"
+	"utils.h"
+	"Creature.h"
+
+1434997230 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\names.h
+	<string>
+	<fstream>
+	<cstdlib>
+
+1435657842 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\item.h
+	<string>
+	<sstream>
+	<curses.h>
+	"palette.h"
+	"Thing.h"
+
+1435487838 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\item.cpp
+	"Item.h"
+
+1435321018 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\main.cpp
+	<string>
+	<vector>
+	<curses.h>
+	<cstdlib>
+	<ctime>
+	"palette.h"
+	"menu.h"
+	"Player.h"
+	"Place.h"
+
+1435411062 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\player.h
+	<string>
+	<vector>
+	"menu.h"
+	"Ship.h"
+	"Person.h"
+
+1472206848 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\ship.h
+	<string>
+	<sstream>
+	<vector>
+	"Thing.h"
+	"ShipBuilding.h"
+
+1435658052 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\place.h
+	<string>
+	<sstream>
+	<vector>
+	"names.h"
+	"utils.h"
+	"menu.h"
+	"Ship.h"
+	"ships.h"
+	"Merchant.h"
+
+1435590624 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\ships.h
+	"Ship.h"
+	"ShipContr.h"
+
+1437500156 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\shipcontr.h
+	<ctime>
+	"menu.h"
+	"comments.h"
+	"bar.h"
+	"Ship.h"
+	"Person.h"
+
+1435589128 c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\merchant.h
+	<vector>
+	"menu.h"
+	"utils.h"
+	"Thing.h"
+	"Player.h"
+	"Ship.h"
+	"ships.h"
+	"ShipBuilding.h"
+	"Person.h"
+
+1434920768 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\memutils.cpp
+	"memutils.h"
+
+1471646192 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\menu.cpp
+	"menu.h"
+
+1446983846 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\merchant.cpp
+	"Merchant.h"
+
+1435139824 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\names.cpp
+	"names.h"
+	"utils.h"
+
+1435158570 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\palette.cpp
+	"palette.h"
+
+1435349172 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\person.cpp
+	"Person.h"
+	"ShipBuilding.h"
+
+1472208672 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\place.cpp
+	"Place.h"
+	"Player.h"
+
+1435411054 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\player.cpp
+	"Player.h"
+	"Place.h"
+
+1446985354 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\ship.cpp
+	"Ship.h"
+
+1472208040 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\shipbuilding.cpp
+	"ShipBuilding.h"
+	"Ship.h"
+
+1437500110 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\shipcontr.cpp
+	"ShipContr.h"
+	"Ship.h"
+
+1435320560 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\ships.cpp
+	"ships.h"
+
+1435154092 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\timer.cpp
+	"Timer.h"
+
+1435412640 source:c:\documents and settings\stefano\documenti\programmi\c\curses\ktb\uilts.cpp
+	"utils.h"
+
+1220915346 c:\libraries\pdcurses\curses.h
+	<stdarg.h>
+	<stddef.h>
+	<stdio.h>
+	<wchar.h>
+

@@ -1,0 +1,97 @@
+[
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/Collector.cpp.o -c /home/dincio/Desktop/old/Collectors/src/Collector.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/Collector.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/Food.cpp.o -c /home/dincio/Desktop/old/Collectors/src/Food.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/Food.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/NeuralNetwork/NeuralLayer.cpp.o -c /home/dincio/Desktop/old/Collectors/src/NeuralNetwork/NeuralLayer.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/NeuralNetwork/NeuralLayer.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/NeuralNetwork/NeuralNetwork.cpp.o -c /home/dincio/Desktop/old/Collectors/src/NeuralNetwork/NeuralNetwork.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/NeuralNetwork/NeuralNetwork.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/NeuralNetwork/Neuron.cpp.o -c /home/dincio/Desktop/old/Collectors/src/NeuralNetwork/Neuron.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/NeuralNetwork/Neuron.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/Ship.cpp.o -c /home/dincio/Desktop/old/Collectors/src/Ship.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/Ship.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/Thing.cpp.o -c /home/dincio/Desktop/old/Collectors/src/Thing.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/Thing.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/globals.cpp.o -c /home/dincio/Desktop/old/Collectors/src/globals.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/globals.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/grappa/Animation.cpp.o -c /home/dincio/Desktop/old/Collectors/src/grappa/Animation.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/grappa/Animation.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/grappa/AnimationSprite.cpp.o -c /home/dincio/Desktop/old/Collectors/src/grappa/AnimationSprite.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/grappa/AnimationSprite.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/grappa/Button.cpp.o -c /home/dincio/Desktop/old/Collectors/src/grappa/Button.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/grappa/Button.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/grappa/Numbox.cpp.o -c /home/dincio/Desktop/old/Collectors/src/grappa/Numbox.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/grappa/Numbox.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/grappa/Sprite.cpp.o -c /home/dincio/Desktop/old/Collectors/src/grappa/Sprite.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/grappa/Sprite.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/grappa/Texture.cpp.o -c /home/dincio/Desktop/old/Collectors/src/grappa/Texture.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/grappa/Texture.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/grappa/TextureSprite.cpp.o -c /home/dincio/Desktop/old/Collectors/src/grappa/TextureSprite.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/grappa/TextureSprite.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/grappa/Timer.cpp.o -c /home/dincio/Desktop/old/Collectors/src/grappa/Timer.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/grappa/Timer.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/grappa/Window.cpp.o -c /home/dincio/Desktop/old/Collectors/src/grappa/Window.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/grappa/Window.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/main.cpp.o -c /home/dincio/Desktop/old/Collectors/src/main.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/main.cpp"
+},
+{
+  "directory": "/home/dincio/Desktop/old/Collectors/build",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/dincio/Desktop/old/Collectors/src -I/home/dincio/Desktop/old/Collectors/src/grappa -I/home/dincio/Desktop/old/Collectors/src/NeuralNetwork    -std=gnu++1z -o CMakeFiles/Proj.dir/src/mathutils.cpp.o -c /home/dincio/Desktop/old/Collectors/src/mathutils.cpp",
+  "file": "/home/dincio/Desktop/old/Collectors/src/mathutils.cpp"
+}
+]

@@ -1,0 +1,35 @@
+:entities:
+C school_crazy_dude
+t school_teacher
+b school_billy
+j school_jenifer
+W school_toilet
+D school_dante
+V school_virgilio
+B school_baggio
+
+:tiles:
+T TREE
++ DOOR
+# WALL
+. GROUND
+, GRASS
+
+
+
+#################################################
+TTTTT....C........#......t......#.W.#......TTTTTT
+TTTTTTT...........+.............#...#.....TTTTTTT
+TTTTTTTT..........#.....b...j...#+###....TTTTTTTT
+TTTTTTTTTTTTTTTTTT#.................#....TT....TT
+TTTTTTTTTTTTTTTTTT#########+#########....TTT.V.TT
+TTTTT.......TTTTTTT.....................TTT....TT
+TTTTTT..D..TTTTTTTTTTT..................TTTTTTTTT
+TTTTT.......TTTTTTTT................B..........TT
+TTTTTT....TTTTTTT,,,...........................TT
+TTTTTTTTTTT.......,,,,,.........................T
+TTTTTTTTT.........,,,,,,.......TTTTTTTTTTTTTTTTTT
+TTTTTTTTTTTTTT........,,,...................TTTTT
+TTTTTTT..............,,,.....................TTTT
+TTTTTTTTTTTTTT..@...........................TTTTT
+#################################################

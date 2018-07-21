@@ -1,0 +1,12 @@
+ID		NAME		SIZE	WEAR_BODY_TEMPLATE	QUEST_KEY	ESSENCE				SPAWN_LV	RARITY		[WEAR_EFF/USE_EFF/DES]
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------:
+crappy_sword	[crappy sword]	10	hbt_single_arm		NONE		[ NORMAL ]			0		0
+[NAM(sword effect);DUR(W);ATT(1.2);AGI(1.1).]
+[.]
+[The crappiest sword you'll ever find]
+
+baggio_tome	[baggio's tome]	5	hbt_single_arm		NONE		[ NORMAL ]			0		0
+[NAM(baggio's aura);DES(an aura of pure wisdom and awesomeness);DUR(W);ATT(5.0);DEF(10.0).]
+[.]
+[A mythical book, from which the sole presence effects profoundly the physycal capacities of anyone who wields it in his hand. If it could be read, it would reveal the very essence of the universe in itself...]
+END

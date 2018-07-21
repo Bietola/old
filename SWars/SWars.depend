@@ -1,0 +1,1613 @@
+# depslib dependency file v1.0
+1443092134 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\bgresourcecontainer.cpp
+	"BGResourceContainer.h"
+	"ResourceExtractor.h"
+
+1442082468 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\bgresourcecontainer.h
+	"Resource.h"
+	"ResourceContainer.h"
+
+1442140522 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\resource.h
+	"Texture.h"
+
+1442080876 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\texture.h
+	<iostream>
+	<string>
+	<cstddef>
+	<SDL.h>
+	<SDL_ttf.h>
+	"Window.h"
+
+1451768293 c:\libraries\sdl2\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<float.h>
+	<iconv.h>
+	<sal.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_config.h
+	"SDL_platform.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	<winapifamily.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\begin_code.h
+
+1451768293 c:\libraries\sdl2\include\close_code.h
+
+1451768293 c:\libraries\sdl2\include\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<mbarrier.h>
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<mmintrin.h>
+	<mm3dnow.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_pixels.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1451768293 c:\libraries\sdl2\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1454366533 c:\libraries\sdl2\include\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1431069142 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\window.h
+	<string>
+	<SDL.h>
+
+1442681139 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\resourcecontainer.h
+	<vector>
+	"Thing.h"
+	"Resource.h"
+
+1442861681 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\thing.h
+	<vector>
+	<SDL.h>
+	"globals.h"
+	"Texture.h"
+
+1443208806 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\globals.h
+	<string>
+	<iostream>
+	<sstream>
+	<SDL.h>
+	<cstdlib>
+	<ctime>
+	<cmath>
+	<conio.h>
+	"Window.h"
+	"Texture.h"
+	"Resource.h"
+
+1439977604 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\resourceextractor.h
+	"Thing.h"
+	"ResourceContainer.h"
+	"Users.h"
+	"Timer.h"
+
+1439977604 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\users.h
+	"Thing.h"
+
+1442332832 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\timer.h
+
+1443209684 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\builder.cpp
+	"Builder.h"
+
+1442773288 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\builder.h
+	<cstddef>
+	"Timer.h"
+	"Thing.h"
+
+1442860359 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\cannon.cpp
+	"Cannon.h"
+
+1442768216 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\cannon.h
+	"Texture.h"
+	"Timer.h"
+	"globals.h"
+	"Thing.h"
+	"Ship.h"
+	"Builder.h"
+
+1442860323 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\ship.h
+	"globals.h"
+	"Thing.h"
+	"Timer.h"
+
+1436385410 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\cthing.cpp
+	"CThing.h"
+
+1436385754 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\cthing.h
+	<SDL.h>
+	"Texture.h"
+	"Thing.h"
+
+1443209169 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\gamestates.cpp
+	"GameStates.h"
+
+1443208806 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\gamestates.h
+	<cstddef>
+	"Texture.h"
+	"Interface.h"
+	"Thing.h"
+	"MCShip.h"
+	"SpecialShips.h"
+	"Network.h"
+	"BGResourceContainer.h"
+
+1440246754 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\interface.h
+	<string>
+	<sstream>
+	<cstring>
+	<conio.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	"Texture.h"
+	"Thing.h"
+
+1443198819 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\mcship.h
+	<cstddef>
+	<SDL.h>
+	"CThing.h"
+	"Ship.h"
+	"Cannon.h"
+	"NetworkMultiBuilder.h"
+	"MaterialProductMultiBuilder.h"
+	"Users.h"
+	"Interface.h"
+
+1440173830 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\networkmultibuilder.h
+	"MultiBuilder.h"
+	"Network.h"
+	"Sharer.h"
+
+1442773116 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\multibuilder.h
+	<vector>
+	"Builder.h"
+	"globals.h"
+
+1440174618 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\network.h
+	<vector>
+	"Sharer.h"
+
+1440173918 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\sharer.h
+	"Thing.h"
+	"Users.h"
+
+1439489662 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\materialproductmultibuilder.h
+	"MultiBuilder.h"
+	"Users.h"
+	"MaterialProduct.h"
+
+1439490988 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\materialproduct.h
+	"Thing.h"
+
+1443095558 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\specialships.h
+	"Texture.h"
+	"Ship.h"
+	"Cannon.h"
+	"MaterialProduct.h"
+	"Resource.h"
+	"BGResourceContainer.h"
+	"Timer.h"
+
+1443209063 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\globals.cpp
+	"globals.h"
+
+1440246754 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\interface.cpp
+	"Interface.h"
+
+1443208806 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<stdlib.h>
+	<time.h>
+	<SDL.h>
+	<conio.h>
+	"globals.h"
+	"GameStates.h"
+	"Timer.h"
+	"Thing.h"
+	"Ship.h"
+	"SpecialShips.h"
+	"Builder.h"
+	"MultiBuilder.h"
+	"Cannon.h"
+	"SpecialCannons.h"
+	"SpecialBuildings.h"
+	"SpecialMaterialProducers.h"
+	"SpecialMaterialResourceExtractors.h"
+	"MCShip.h"
+	"Resource.h"
+	"BGResourceContainer.h"
+
+1442767883 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\specialcannons.h
+	"Cannon.h"
+	"SpecialShips.h"
+	"MaterialProduct.h"
+
+1439047038 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\specialmaterialproducers.h
+	"globals.h"
+	"Producer.h"
+	"Sharer.h"
+
+1439050936 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\producer.h
+	"Thing.h"
+	"Users.h"
+	"Timer.h"
+
+1442683015 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\specialmaterialresourceextractors.h
+	"ResourceExtractor.h"
+	"MaterialProduct.h"
+	"Sharer.h"
+	"globals.h"
+
+1439136038 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\materialproduct.cpp
+	"MaterialProduct.h"
+
+1439489662 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\materialproductmultibuilder.cpp
+	"MaterialProductMultiBuilder.h"
+
+1443207686 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\mcship.cpp
+	"MCShip.h"
+	"GameStates.h"
+
+1436436292 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\mcworld.cpp
+	"MCWorld.h"
+
+1440176380 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\mcworld.h
+	<vector>
+	"Interface.h"
+	"Texture.h"
+	"CThing.h"
+	"Orbiter.h"
+	"MultiShip.h"
+
+1436430940 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\orbiter.h
+	"Ship.h"
+
+1436435534 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\multiship.h
+	<vector>
+	"Ship.h"
+	"Orbiter.h"
+
+1442773105 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\multibuilder.cpp
+	"MultiBuilder.h"
+
+1436435002 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\multiship.cpp
+	"MultiShip.h"
+
+1440174582 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\network.cpp
+	"Network.h"
+
+1438687884 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\networkbuilder.cpp
+	"NetworkBuilder.h"
+
+1438687884 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\networkbuilder.h
+	"Builder.h"
+	"Network.h"
+	"Sharer.h"
+
+1440173854 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\networkmultibuilder.cpp
+	"NetworkMultiBuilder.h"
+
+1436430960 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\orbiter.cpp
+	"Orbiter.h"
+	"MultiShip.h"
+
+1439054846 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\producer.cpp
+	"Producer.h"
+
+1442140504 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\resource.cpp
+	"Resource.h"
+
+1442082468 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\resourcecontainer.cpp
+	"ResourceContainer.h"
+
+1439977910 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\resourceextractor.cpp
+	"ResourceExtractor.h"
+
+1439977910 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\sharer.cpp
+	"Sharer.h"
+	"Network.h"
+
+1442678748 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\ship.cpp
+	"Ship.h"
+	"GameStates.h"
+
+1443199424 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\specialcannons.cpp
+	"SpecialCannons.h"
+
+1442682524 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\specialmaterialproducers.cpp
+	"SpecialMaterialProducers.h"
+
+1443207865 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\specialmaterialresourceextractors.cpp
+	"SpecialMaterialResourceExtractors.h"
+
+1442080876 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\texture.cpp
+	"Texture.h"
+
+1439795174 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\thing.cpp
+	"Thing.h"
+
+1442332832 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\timer.cpp
+	"Timer.h"
+
+1439977604 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\users.cpp
+	"Users.h"
+
+1431069142 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\window.cpp
+	"Window.h"
+
+1426777436 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\world.cpp
+
+1443202002 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\specialships.cpp
+	"SpecialShips.h"
+
+1443200414 c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\specialbuildings.h
+	"Thing.h"
+	"MaterialProduct.h"
+	"GameStates.h"
+	"globals.h"
+
+1443200414 source:c:\users\stefano\documents\programmi\c\sdl\swars_prealpha_3\specialbuildings.cpp
+	"SpecialBuildings.h"
+
+1443095734 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\bgresourcecontainer.cpp
+	"BGResourceContainer.h"
+	"ResourceExtractor.h"
+
+1442086068 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\bgresourcecontainer.h
+	"Resource.h"
+	"ResourceContainer.h"
+
+1442144122 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\resource.h
+	"Texture.h"
+
+1442084476 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\texture.h
+	<iostream>
+	<string>
+	<cstddef>
+	<SDL.h>
+	<SDL_ttf.h>
+	"Window.h"
+
+1431072742 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\window.h
+	<string>
+	<SDL.h>
+
+1442684740 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\resourcecontainer.h
+	<vector>
+	"Thing.h"
+	"Resource.h"
+
+1442865282 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\thing.h
+	<vector>
+	<SDL.h>
+	"globals.h"
+	"Texture.h"
+
+1443212406 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\globals.h
+	<string>
+	<iostream>
+	<sstream>
+	<SDL.h>
+	<cstdlib>
+	<ctime>
+	<cmath>
+	<conio.h>
+	"Window.h"
+	"Texture.h"
+	"Resource.h"
+
+1439981204 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\resourceextractor.h
+	"Thing.h"
+	"ResourceContainer.h"
+	"Users.h"
+	"Timer.h"
+
+1439981204 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\users.h
+	"Thing.h"
+
+1442336432 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\timer.h
+
+1443213284 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\builder.cpp
+	"Builder.h"
+
+1442776888 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\builder.h
+	<cstddef>
+	"Timer.h"
+	"Thing.h"
+
+1442863960 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\cannon.cpp
+	"Cannon.h"
+
+1442771816 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\cannon.h
+	"Texture.h"
+	"Timer.h"
+	"globals.h"
+	"Thing.h"
+	"Ship.h"
+	"Builder.h"
+
+1442863924 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\ship.h
+	"globals.h"
+	"Thing.h"
+	"Timer.h"
+
+1436389010 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\cthing.cpp
+	"CThing.h"
+
+1436389354 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\cthing.h
+	<SDL.h>
+	"Texture.h"
+	"Thing.h"
+
+1443212770 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\gamestates.cpp
+	"GameStates.h"
+
+1443212406 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\gamestates.h
+	<cstddef>
+	"Texture.h"
+	"Interface.h"
+	"Thing.h"
+	"MCShip.h"
+	"SpecialShips.h"
+	"Network.h"
+	"BGResourceContainer.h"
+
+1440250354 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\interface.h
+	<string>
+	<sstream>
+	<cstring>
+	<conio.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	"Texture.h"
+	"Thing.h"
+
+1443202420 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\mcship.h
+	<cstddef>
+	<SDL.h>
+	"CThing.h"
+	"Ship.h"
+	"Cannon.h"
+	"NetworkMultiBuilder.h"
+	"MaterialProductMultiBuilder.h"
+	"Users.h"
+	"Interface.h"
+
+1440177430 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\networkmultibuilder.h
+	"MultiBuilder.h"
+	"Network.h"
+	"Sharer.h"
+
+1442776716 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\multibuilder.h
+	<vector>
+	"Builder.h"
+	"globals.h"
+
+1440178218 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\network.h
+	<vector>
+	"Sharer.h"
+
+1440177518 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\sharer.h
+	"Thing.h"
+	"Users.h"
+
+1439493262 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\materialproductmultibuilder.h
+	"MultiBuilder.h"
+	"Users.h"
+	"MaterialProduct.h"
+
+1439494588 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\materialproduct.h
+	"Thing.h"
+
+1443099158 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\specialships.h
+	"Texture.h"
+	"Ship.h"
+	"Cannon.h"
+	"MaterialProduct.h"
+	"Resource.h"
+	"BGResourceContainer.h"
+	"Timer.h"
+
+1443212664 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\globals.cpp
+	"globals.h"
+
+1440250354 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\interface.cpp
+	"Interface.h"
+
+1443212406 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<stdlib.h>
+	<time.h>
+	<SDL.h>
+	<conio.h>
+	"globals.h"
+	"GameStates.h"
+	"Timer.h"
+	"Thing.h"
+	"Ship.h"
+	"SpecialShips.h"
+	"Builder.h"
+	"MultiBuilder.h"
+	"Cannon.h"
+	"SpecialCannons.h"
+	"SpecialBuildings.h"
+	"SpecialMaterialProducers.h"
+	"SpecialMaterialResourceExtractors.h"
+	"MCShip.h"
+	"Resource.h"
+	"BGResourceContainer.h"
+
+1442771484 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\specialcannons.h
+	"Cannon.h"
+	"SpecialShips.h"
+	"MaterialProduct.h"
+
+1443204014 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\specialbuildings.h
+	"Thing.h"
+	"MaterialProduct.h"
+	"GameStates.h"
+	"globals.h"
+
+1439050638 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\specialmaterialproducers.h
+	"globals.h"
+	"Producer.h"
+	"Sharer.h"
+
+1439054536 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\producer.h
+	"Thing.h"
+	"Users.h"
+	"Timer.h"
+
+1442686616 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\specialmaterialresourceextractors.h
+	"ResourceExtractor.h"
+	"MaterialProduct.h"
+	"Sharer.h"
+	"globals.h"
+
+1439139638 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\materialproduct.cpp
+	"MaterialProduct.h"
+
+1439493262 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\materialproductmultibuilder.cpp
+	"MaterialProductMultiBuilder.h"
+
+1443211286 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\mcship.cpp
+	"MCShip.h"
+	"GameStates.h"
+
+1436439892 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\mcworld.cpp
+	"MCWorld.h"
+
+1440179980 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\mcworld.h
+	<vector>
+	"Interface.h"
+	"Texture.h"
+	"CThing.h"
+	"Orbiter.h"
+	"MultiShip.h"
+
+1436434540 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\orbiter.h
+	"Ship.h"
+
+1436439134 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\multiship.h
+	<vector>
+	"Ship.h"
+	"Orbiter.h"
+
+1442776706 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\multibuilder.cpp
+	"MultiBuilder.h"
+
+1436438602 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\multiship.cpp
+	"MultiShip.h"
+
+1440178182 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\network.cpp
+	"Network.h"
+
+1438691484 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\networkbuilder.cpp
+	"NetworkBuilder.h"
+
+1438691484 c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\networkbuilder.h
+	"Builder.h"
+	"Network.h"
+	"Sharer.h"
+
+1440177454 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\networkmultibuilder.cpp
+	"NetworkMultiBuilder.h"
+
+1436434560 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\orbiter.cpp
+	"Orbiter.h"
+	"MultiShip.h"
+
+1439058446 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\producer.cpp
+	"Producer.h"
+
+1442144104 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\resource.cpp
+	"Resource.h"
+
+1442086068 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\resourcecontainer.cpp
+	"ResourceContainer.h"
+
+1439981510 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\resourceextractor.cpp
+	"ResourceExtractor.h"
+
+1439981510 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\sharer.cpp
+	"Sharer.h"
+	"Network.h"
+
+1442682348 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\ship.cpp
+	"Ship.h"
+	"GameStates.h"
+
+1443204014 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\specialbuildings.cpp
+	"SpecialBuildings.h"
+
+1443203024 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\specialcannons.cpp
+	"SpecialCannons.h"
+
+1442686124 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\specialmaterialproducers.cpp
+	"SpecialMaterialProducers.h"
+
+1443211466 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\specialmaterialresourceextractors.cpp
+	"SpecialMaterialResourceExtractors.h"
+
+1443205602 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\specialships.cpp
+	"SpecialShips.h"
+
+1442084476 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\texture.cpp
+	"Texture.h"
+
+1439798774 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\thing.cpp
+	"Thing.h"
+
+1442336432 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\timer.cpp
+	"Timer.h"
+
+1439981204 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\users.cpp
+	"Users.h"
+
+1431072742 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\window.cpp
+	"Window.h"
+
+1426781036 source:c:\documents and settings\stefano\documenti\programmi\c\sdl\swars_prealpha_3\world.cpp
+
+1443099334 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\bgresourcecontainer.cpp
+	"BGResourceContainer.h"
+	"ResourceExtractor.h"
+
+1442089668 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\bgresourcecontainer.h
+	"Resource.h"
+	"ResourceContainer.h"
+
+1442147722 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\resource.h
+	"Texture.h"
+
+1442088076 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\texture.h
+	<iostream>
+	<string>
+	<cstddef>
+	<SDL.h>
+	<SDL_ttf.h>
+	"Window.h"
+
+1431076342 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\window.h
+	<string>
+	<SDL.h>
+
+1442688340 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\resourcecontainer.h
+	<vector>
+	"Thing.h"
+	"Resource.h"
+
+1442868882 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\thing.h
+	<vector>
+	<SDL.h>
+	"globals.h"
+	"Texture.h"
+
+1443216006 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\globals.h
+	<string>
+	<iostream>
+	<sstream>
+	<SDL.h>
+	<cstdlib>
+	<ctime>
+	<cmath>
+	<conio.h>
+	"Window.h"
+	"Texture.h"
+	"Resource.h"
+
+1439984804 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\resourceextractor.h
+	"Thing.h"
+	"ResourceContainer.h"
+	"Users.h"
+	"Timer.h"
+
+1439984804 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\users.h
+	"Thing.h"
+
+1442340032 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\timer.h
+
+1443216884 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\builder.cpp
+	"Builder.h"
+
+1442780488 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\builder.h
+	<cstddef>
+	"Timer.h"
+	"Thing.h"
+
+1442867560 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\cannon.cpp
+	"Cannon.h"
+
+1442775416 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\cannon.h
+	"Texture.h"
+	"Timer.h"
+	"globals.h"
+	"Thing.h"
+	"Ship.h"
+	"Builder.h"
+
+1442867524 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\ship.h
+	"globals.h"
+	"Thing.h"
+	"Timer.h"
+
+1436392610 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\cthing.cpp
+	"CThing.h"
+
+1436392954 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\cthing.h
+	<SDL.h>
+	"Texture.h"
+	"Thing.h"
+
+1476914176 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\gamestates.cpp
+	"GameStates.h"
+
+1443216006 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\gamestates.h
+	<cstddef>
+	"Texture.h"
+	"Interface.h"
+	"Thing.h"
+	"MCShip.h"
+	"SpecialShips.h"
+	"Network.h"
+	"BGResourceContainer.h"
+
+1440253954 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\interface.h
+	<string>
+	<sstream>
+	<cstring>
+	<conio.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	"Texture.h"
+	"Thing.h"
+
+1443206020 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\mcship.h
+	<cstddef>
+	<SDL.h>
+	"CThing.h"
+	"Ship.h"
+	"Cannon.h"
+	"NetworkMultiBuilder.h"
+	"MaterialProductMultiBuilder.h"
+	"Users.h"
+	"Interface.h"
+
+1440181030 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\networkmultibuilder.h
+	"MultiBuilder.h"
+	"Network.h"
+	"Sharer.h"
+
+1442780316 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\multibuilder.h
+	<vector>
+	"Builder.h"
+	"globals.h"
+
+1440181818 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\network.h
+	<vector>
+	"Sharer.h"
+
+1440181118 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\sharer.h
+	"Thing.h"
+	"Users.h"
+
+1439496862 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\materialproductmultibuilder.h
+	"MultiBuilder.h"
+	"Users.h"
+	"MaterialProduct.h"
+
+1439498188 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\materialproduct.h
+	"Thing.h"
+
+1476912888 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\specialships.h
+	"Texture.h"
+	"Ship.h"
+	"Cannon.h"
+	"MaterialProduct.h"
+	"Resource.h"
+	"BGResourceContainer.h"
+	"Timer.h"
+
+1443216264 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\globals.cpp
+	"globals.h"
+
+1476914128 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\interface.cpp
+	"Interface.h"
+
+1443216006 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<stdlib.h>
+	<time.h>
+	<SDL.h>
+	<conio.h>
+	"globals.h"
+	"GameStates.h"
+	"Timer.h"
+	"Thing.h"
+	"Ship.h"
+	"SpecialShips.h"
+	"Builder.h"
+	"MultiBuilder.h"
+	"Cannon.h"
+	"SpecialCannons.h"
+	"SpecialBuildings.h"
+	"SpecialMaterialProducers.h"
+	"SpecialMaterialResourceExtractors.h"
+	"MCShip.h"
+	"Resource.h"
+	"BGResourceContainer.h"
+
+1442775084 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\specialcannons.h
+	"Cannon.h"
+	"SpecialShips.h"
+	"MaterialProduct.h"
+
+1443207614 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\specialbuildings.h
+	"Thing.h"
+	"MaterialProduct.h"
+	"GameStates.h"
+	"globals.h"
+
+1439054238 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\specialmaterialproducers.h
+	"globals.h"
+	"Producer.h"
+	"Sharer.h"
+
+1439058136 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\producer.h
+	"Thing.h"
+	"Users.h"
+	"Timer.h"
+
+1442690216 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\specialmaterialresourceextractors.h
+	"ResourceExtractor.h"
+	"MaterialProduct.h"
+	"Sharer.h"
+	"globals.h"
+
+1439143238 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\materialproduct.cpp
+	"MaterialProduct.h"
+
+1439496862 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\materialproductmultibuilder.cpp
+	"MaterialProductMultiBuilder.h"
+
+1443214886 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\mcship.cpp
+	"MCShip.h"
+	"GameStates.h"
+
+1436443492 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\mcworld.cpp
+	"MCWorld.h"
+
+1440183580 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\mcworld.h
+	<vector>
+	"Interface.h"
+	"Texture.h"
+	"CThing.h"
+	"Orbiter.h"
+	"MultiShip.h"
+
+1436438140 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\orbiter.h
+	"Ship.h"
+
+1436442734 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\multiship.h
+	<vector>
+	"Ship.h"
+	"Orbiter.h"
+
+1442780306 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\multibuilder.cpp
+	"MultiBuilder.h"
+
+1436442202 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\multiship.cpp
+	"MultiShip.h"
+
+1440181782 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\network.cpp
+	"Network.h"
+
+1438695084 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\networkbuilder.cpp
+	"NetworkBuilder.h"
+
+1438695084 c:\users\stefano\desktop\c\sdl\swars_prealpha_3\networkbuilder.h
+	"Builder.h"
+	"Network.h"
+	"Sharer.h"
+
+1440181054 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\networkmultibuilder.cpp
+	"NetworkMultiBuilder.h"
+
+1436438160 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\orbiter.cpp
+	"Orbiter.h"
+	"MultiShip.h"
+
+1439062046 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\producer.cpp
+	"Producer.h"
+
+1442147704 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\resource.cpp
+	"Resource.h"
+
+1442089668 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\resourcecontainer.cpp
+	"ResourceContainer.h"
+
+1439985110 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\resourceextractor.cpp
+	"ResourceExtractor.h"
+
+1439985110 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\sharer.cpp
+	"Sharer.h"
+	"Network.h"
+
+1442685948 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\ship.cpp
+	"Ship.h"
+	"GameStates.h"
+
+1443207614 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\specialbuildings.cpp
+	"SpecialBuildings.h"
+
+1443206624 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\specialcannons.cpp
+	"SpecialCannons.h"
+
+1442689724 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\specialmaterialproducers.cpp
+	"SpecialMaterialProducers.h"
+
+1443215066 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\specialmaterialresourceextractors.cpp
+	"SpecialMaterialResourceExtractors.h"
+
+1476912912 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\specialships.cpp
+	"SpecialShips.h"
+
+1442088076 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\texture.cpp
+	"Texture.h"
+
+1439802374 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\thing.cpp
+	"Thing.h"
+
+1442340032 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\timer.cpp
+	"Timer.h"
+
+1439984804 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\users.cpp
+	"Users.h"
+
+1431076342 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\window.cpp
+	"Window.h"
+
+1426781036 source:c:\users\stefano\desktop\c\sdl\swars_prealpha_3\world.cpp
+
+1443099334 source:c:\code\c\sdl2\swars_prealpha_3\bgresourcecontainer.cpp
+	"BGResourceContainer.h"
+	"ResourceExtractor.h"
+
+1442089668 c:\code\c\sdl2\swars_prealpha_3\bgresourcecontainer.h
+	"Resource.h"
+	"ResourceContainer.h"
+
+1442147722 c:\code\c\sdl2\swars_prealpha_3\resource.h
+	"Texture.h"
+
+1442088076 c:\code\c\sdl2\swars_prealpha_3\texture.h
+	<iostream>
+	<string>
+	<cstddef>
+	<SDL.h>
+	<SDL_ttf.h>
+	"Window.h"
+
+1431076342 c:\code\c\sdl2\swars_prealpha_3\window.h
+	<string>
+	<SDL.h>
+
+1442688340 c:\code\c\sdl2\swars_prealpha_3\resourcecontainer.h
+	<vector>
+	"Thing.h"
+	"Resource.h"
+
+1442868882 c:\code\c\sdl2\swars_prealpha_3\thing.h
+	<vector>
+	<SDL.h>
+	"globals.h"
+	"Texture.h"
+
+1443216006 c:\code\c\sdl2\swars_prealpha_3\globals.h
+	<string>
+	<iostream>
+	<sstream>
+	<SDL.h>
+	<cstdlib>
+	<ctime>
+	<cmath>
+	<conio.h>
+	"Window.h"
+	"Texture.h"
+	"Resource.h"
+
+1439984804 c:\code\c\sdl2\swars_prealpha_3\resourceextractor.h
+	"Thing.h"
+	"ResourceContainer.h"
+	"Users.h"
+	"Timer.h"
+
+1439984804 c:\code\c\sdl2\swars_prealpha_3\users.h
+	"Thing.h"
+
+1442340032 c:\code\c\sdl2\swars_prealpha_3\timer.h
+
+1443216884 source:c:\code\c\sdl2\swars_prealpha_3\builder.cpp
+	"Builder.h"
+
+1442780488 c:\code\c\sdl2\swars_prealpha_3\builder.h
+	<cstddef>
+	"Timer.h"
+	"Thing.h"
+
+1442867560 source:c:\code\c\sdl2\swars_prealpha_3\cannon.cpp
+	"Cannon.h"
+
+1442775416 c:\code\c\sdl2\swars_prealpha_3\cannon.h
+	"Texture.h"
+	"Timer.h"
+	"globals.h"
+	"Thing.h"
+	"Ship.h"
+	"Builder.h"
+
+1442867524 c:\code\c\sdl2\swars_prealpha_3\ship.h
+	"globals.h"
+	"Thing.h"
+	"Timer.h"
+
+1436392610 source:c:\code\c\sdl2\swars_prealpha_3\cthing.cpp
+	"CThing.h"
+
+1436392954 c:\code\c\sdl2\swars_prealpha_3\cthing.h
+	<SDL.h>
+	"Texture.h"
+	"Thing.h"
+
+1488796122 source:c:\code\c\sdl2\swars_prealpha_3\gamestates.cpp
+	"GameStates.h"
+
+1443216006 c:\code\c\sdl2\swars_prealpha_3\gamestates.h
+	<cstddef>
+	"Texture.h"
+	"Interface.h"
+	"Thing.h"
+	"MCShip.h"
+	"SpecialShips.h"
+	"Network.h"
+	"BGResourceContainer.h"
+
+1440253954 c:\code\c\sdl2\swars_prealpha_3\interface.h
+	<string>
+	<sstream>
+	<cstring>
+	<conio.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	"Texture.h"
+	"Thing.h"
+
+1443206020 c:\code\c\sdl2\swars_prealpha_3\mcship.h
+	<cstddef>
+	<SDL.h>
+	"CThing.h"
+	"Ship.h"
+	"Cannon.h"
+	"NetworkMultiBuilder.h"
+	"MaterialProductMultiBuilder.h"
+	"Users.h"
+	"Interface.h"
+
+1440181030 c:\code\c\sdl2\swars_prealpha_3\networkmultibuilder.h
+	"MultiBuilder.h"
+	"Network.h"
+	"Sharer.h"
+
+1442780316 c:\code\c\sdl2\swars_prealpha_3\multibuilder.h
+	<vector>
+	"Builder.h"
+	"globals.h"
+
+1440181818 c:\code\c\sdl2\swars_prealpha_3\network.h
+	<vector>
+	"Sharer.h"
+
+1440181118 c:\code\c\sdl2\swars_prealpha_3\sharer.h
+	"Thing.h"
+	"Users.h"
+
+1439496862 c:\code\c\sdl2\swars_prealpha_3\materialproductmultibuilder.h
+	"MultiBuilder.h"
+	"Users.h"
+	"MaterialProduct.h"
+
+1439498188 c:\code\c\sdl2\swars_prealpha_3\materialproduct.h
+	"Thing.h"
+
+1476912888 c:\code\c\sdl2\swars_prealpha_3\specialships.h
+	"Texture.h"
+	"Ship.h"
+	"Cannon.h"
+	"MaterialProduct.h"
+	"Resource.h"
+	"BGResourceContainer.h"
+	"Timer.h"
+
+1443216264 source:c:\code\c\sdl2\swars_prealpha_3\globals.cpp
+	"globals.h"
+
+1476914128 source:c:\code\c\sdl2\swars_prealpha_3\interface.cpp
+	"Interface.h"
+
+1443216006 source:c:\code\c\sdl2\swars_prealpha_3\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<stdlib.h>
+	<time.h>
+	<SDL.h>
+	<conio.h>
+	"globals.h"
+	"GameStates.h"
+	"Timer.h"
+	"Thing.h"
+	"Ship.h"
+	"SpecialShips.h"
+	"Builder.h"
+	"MultiBuilder.h"
+	"Cannon.h"
+	"SpecialCannons.h"
+	"SpecialBuildings.h"
+	"SpecialMaterialProducers.h"
+	"SpecialMaterialResourceExtractors.h"
+	"MCShip.h"
+	"Resource.h"
+	"BGResourceContainer.h"
+
+1442775084 c:\code\c\sdl2\swars_prealpha_3\specialcannons.h
+	"Cannon.h"
+	"SpecialShips.h"
+	"MaterialProduct.h"
+
+1443207614 c:\code\c\sdl2\swars_prealpha_3\specialbuildings.h
+	"Thing.h"
+	"MaterialProduct.h"
+	"GameStates.h"
+	"globals.h"
+
+1439054238 c:\code\c\sdl2\swars_prealpha_3\specialmaterialproducers.h
+	"globals.h"
+	"Producer.h"
+	"Sharer.h"
+
+1439058136 c:\code\c\sdl2\swars_prealpha_3\producer.h
+	"Thing.h"
+	"Users.h"
+	"Timer.h"
+
+1442690216 c:\code\c\sdl2\swars_prealpha_3\specialmaterialresourceextractors.h
+	"ResourceExtractor.h"
+	"MaterialProduct.h"
+	"Sharer.h"
+	"globals.h"
+
+1439143238 source:c:\code\c\sdl2\swars_prealpha_3\materialproduct.cpp
+	"MaterialProduct.h"
+
+1439496862 source:c:\code\c\sdl2\swars_prealpha_3\materialproductmultibuilder.cpp
+	"MaterialProductMultiBuilder.h"
+
+1443214886 source:c:\code\c\sdl2\swars_prealpha_3\mcship.cpp
+	"MCShip.h"
+	"GameStates.h"
+
+1436443492 source:c:\code\c\sdl2\swars_prealpha_3\mcworld.cpp
+	"MCWorld.h"
+
+1440183580 c:\code\c\sdl2\swars_prealpha_3\mcworld.h
+	<vector>
+	"Interface.h"
+	"Texture.h"
+	"CThing.h"
+	"Orbiter.h"
+	"MultiShip.h"
+
+1436438140 c:\code\c\sdl2\swars_prealpha_3\orbiter.h
+	"Ship.h"
+
+1436442734 c:\code\c\sdl2\swars_prealpha_3\multiship.h
+	<vector>
+	"Ship.h"
+	"Orbiter.h"
+
+1442780306 source:c:\code\c\sdl2\swars_prealpha_3\multibuilder.cpp
+	"MultiBuilder.h"
+
+1436442202 source:c:\code\c\sdl2\swars_prealpha_3\multiship.cpp
+	"MultiShip.h"
+
+1440181782 source:c:\code\c\sdl2\swars_prealpha_3\network.cpp
+	"Network.h"
+
+1438695084 source:c:\code\c\sdl2\swars_prealpha_3\networkbuilder.cpp
+	"NetworkBuilder.h"
+
+1438695084 c:\code\c\sdl2\swars_prealpha_3\networkbuilder.h
+	"Builder.h"
+	"Network.h"
+	"Sharer.h"
+
+1440181054 source:c:\code\c\sdl2\swars_prealpha_3\networkmultibuilder.cpp
+	"NetworkMultiBuilder.h"
+
+1436438160 source:c:\code\c\sdl2\swars_prealpha_3\orbiter.cpp
+	"Orbiter.h"
+	"MultiShip.h"
+
+1439062046 source:c:\code\c\sdl2\swars_prealpha_3\producer.cpp
+	"Producer.h"
+
+1442147704 source:c:\code\c\sdl2\swars_prealpha_3\resource.cpp
+	"Resource.h"
+
+1442089668 source:c:\code\c\sdl2\swars_prealpha_3\resourcecontainer.cpp
+	"ResourceContainer.h"
+
+1439985110 source:c:\code\c\sdl2\swars_prealpha_3\resourceextractor.cpp
+	"ResourceExtractor.h"
+
+1439985110 source:c:\code\c\sdl2\swars_prealpha_3\sharer.cpp
+	"Sharer.h"
+	"Network.h"
+
+1442685948 source:c:\code\c\sdl2\swars_prealpha_3\ship.cpp
+	"Ship.h"
+	"GameStates.h"
+
+1443207614 source:c:\code\c\sdl2\swars_prealpha_3\specialbuildings.cpp
+	"SpecialBuildings.h"
+
+1443206624 source:c:\code\c\sdl2\swars_prealpha_3\specialcannons.cpp
+	"SpecialCannons.h"
+
+1442689724 source:c:\code\c\sdl2\swars_prealpha_3\specialmaterialproducers.cpp
+	"SpecialMaterialProducers.h"
+
+1443215066 source:c:\code\c\sdl2\swars_prealpha_3\specialmaterialresourceextractors.cpp
+	"SpecialMaterialResourceExtractors.h"
+
+1476912912 source:c:\code\c\sdl2\swars_prealpha_3\specialships.cpp
+	"SpecialShips.h"
+
+1442088076 source:c:\code\c\sdl2\swars_prealpha_3\texture.cpp
+	"Texture.h"
+
+1439802374 source:c:\code\c\sdl2\swars_prealpha_3\thing.cpp
+	"Thing.h"
+
+1442340032 source:c:\code\c\sdl2\swars_prealpha_3\timer.cpp
+	"Timer.h"
+
+1439984804 source:c:\code\c\sdl2\swars_prealpha_3\users.cpp
+	"Users.h"
+
+1431076342 source:c:\code\c\sdl2\swars_prealpha_3\window.cpp
+	"Window.h"
+
+1426781036 source:c:\code\c\sdl2\swars_prealpha_3\world.cpp
+

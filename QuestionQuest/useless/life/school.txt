@@ -1,0 +1,7 @@
+ID		NAME		GRA	FCLR	BCLR	MOVE_T	ESSENCE		RARITY	SPAWNLV	HP	MAN	ATT	DEF	LCK	AGI	VIS	MV1	MV2	MV3	MV4
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:
+school_baggio	Baggio		B	BLUE	BLACK	STILL	PHILOSOPHY	NO_BATTLE
+[A wonderfull philosophy teacher. Likes to do his job.]
+[]
+
+END

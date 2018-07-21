@@ -1,0 +1,55 @@
+[ custom body ]
+[ custom soul ]
+[ starting inventory ]
+[ description ]
+ID		NAME			GRA	FCLR	BCLR	MOVE_T		SPAWN_ESSENCE	RARITY	SPAWNLV	HP	MAN	ATT	DEF	LCK	AGI	VIS	MV1		MV2		MV3		MV4
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:
+guy		[ guy ]			@	WHITE	BLACK	USER		WATER		0	0	100	100	20	10	10	20	6 6	punch		NO		NO		NO
+[ TEMPLATE bt_human ]
+[ EARTH 1000 ]
+[ ]
+[The guy that's average... average in attack, average in health, average in defence, etc, etc.]
+
+adventurer	[ adventurer ]		@	WHITE	BLACK	USER		AIR		0	0	50	100	20	5	10	50	9 9	punch		learn		canna		NO
+[ TEMPLATE bt_human ]
+[ TEMPLATE st_human ]
+[ crappy_sword baggio_tome ]
+[Low HP and DEF and an average ATT, but very high AGI and DOD! Can grow stronger against one specific type of enemy by learning its weak points.]
+
+squadra		[ squadra ]		s	CYAN	BLACK	DUMMY		ART		0	0	25	10	7	5	2	20	5 5	impale		NO		NO		NO
+[ TEMPLATE bt_squadra ]
+[ TEMPLATE st_utensil ]
+[ ]
+[A drawing utensil that can impale anyone with its sharp point]
+
+crazy_medic	[ crazy medic ]		m	WHITE	BLACK	DUMMY		MEDICINE	0	-1	30	20	5	5	2	15	4 4	cure1		confuse		bubu		NO
+[ TEMPLATE bt_human ]
+[ TEMPLATE st_medical ]
+[ ]
+[An ordinary student who just got out of med-school... He/She is capable of basic medical procedures ]
+
+idiot		[ idiot ]		i	WHITE	BLACK	IMMOBILE	EARTH		0	0	40	10	1	1	5	20	4 4	learn		NO		NO		NO
+[ TEMPLATE bt_human ]
+[ TEMPLATE st_human ]
+[ ]
+[An idiot...]
+
+intro_guide	[ crazy old man ]	o	WHITE	BLACK	DUMMY		EARTH		0	0	40	10	1	1	5	20	4 4	confuse		NO		NO		NO
+[ TEMPLATE bt_human ]
+[ TEMPLATE st_human CRAZYNESS 1000 ]
+[ ]
+[An old man that likes potatoes...]
+
+baggio		[ baggio ]		B	BLUE	BLACK	IMMOBILE	EARTH		0	0	500	1000	50	50	50	75	0 0 	learn		confuse		NO		NO
+[ TEMPLATE bt_human ]
+[ TEMPLATE st_human PHILOSOPHY 500 HISTORY 500 ]
+[ ]
+[A philosophy professor]
+
+quest_giver	[ quest giver ]		q	CYAN	BLACK	IMMOBILE	EARTH		0	0	0	0	0	0	0	0	0 0 	NO		NO		NO		NO
+[ TEMPLATE bt_human ]
+[ TEMPLATE st_human PHILOSOPHY 50 ]
+[ ]
+[A quest giver]
+
+END

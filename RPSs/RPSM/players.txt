@@ -1,0 +1,25 @@
+name		role
+-------------------:
+stefano		USER
+chicco		USER
+tina		CPU	
+roosvelt	CPU	
+sofi		CPU	
+adolfa		CPU
+atena		CPU	
+batman		CPU	
+gigante		CPU	
+chief		CPU	
+sherlock	CPU
+mara		CPU
+davide		CPU	
+milli		CPU	
+nonnochuck	CPU	
+jelly		CPU		
+knuckles	CPU	
+speakman	CPU	
+daniele		CPU
+steve		CPU
+richard		CPU
+nonnolaser	CPU
+culocane	CPU

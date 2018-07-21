@@ -1,0 +1,17 @@
+
+metodo:
+	nome: AreaRettangolo
+	procedimento:
+		rettangolo.area=rettangolo.base*rettangolo.altezza
+metodo:
+	nome: AreaTriangolo
+	procedimento:
+		triangolo.area=triangolo.base*triangolo.altezza/2
+metodo:
+	nome: AreaCerchio
+	procedimento:
+		cerchio.area=cerchio.raggio*cerchio.raggio*3.14
+metodo:
+	nome: RapportoDiametroRaggio
+	procedimento:
+		cerchio.diametro=2*cerchio.raggio

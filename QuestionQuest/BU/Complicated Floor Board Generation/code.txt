@@ -1,0 +1,99 @@
+//random width and height of the floor
+    size_t width = dgen::rrange(50, 100);
+    size_t height = dgen::rrange(50, 100);
+    //return value
+    Board* retBoard = new Board(width, height, COLOR_BLACK, difficulty);
+    //floor tile and wall tile
+    TILE floorTile("med_floor");
+    TILE wallTile("med_wall");
+    //generation debug file
+    ofstream dbf("dungeon_generation_log.txt", ofstream::app);
+    //set seed
+    srand(seed);
+    //generate randomly sized dungeon floor (board) with random parameters
+    dgen::Board board(width, height);
+    dgen::GenInfo ginf;
+    //...
+    board.generate(ginf, dbf);
+    //function for picking essences to spawn tiles
+    auto pickEssencesToSpawn = [&gEssences, this](){
+        vector<ESSENCE> spawnEssences;
+        int r = dgen::rrange(1, difficulty + 1);
+        for(int j = 0; j < r; j++){
+            size_t r = dgen::rrange(gEssences.size());
+            assert(r >= 0 && r < gEssences.size());
+            spawnEssences.push_back(gEssences[r]->name);
+        }
+        return spawnEssences;
+    };
+    //pick them once
+    vector<ESSENCE> spawnEssences;
+    spawnEssences = pickEssencesToSpawn();
+    //function to get a tile which has the specified spawn flag
+    unsigned int outerlcheck = 0;
+    std::function<ESSENCE(const TILESPWNFLAG& spawnFlag)> getTileOfSpwnFlag;
+    getTileOfSpwnFlag = [&getTileOfSpwnFlag, &outerlcheck, &spawnEssences, &pickEssencesToSpawn](const TILESPWNFLAG& spawnFlag){
+        unsigned int innerlcheck = 0;
+        //iterate through all tiles
+        for(const auto& tile : gTiles){
+            //check if tile is of correct essence
+            bool tileIsOfCorrectEssence = false;
+            for(const auto& ess : spawnEssences){
+                if(tile->essence == ess){
+                    tileIsOfCorrectEssence = true;
+                    break;
+                }
+            }
+            //if it is, check if tile is of the wanted spawn flag (NB: there is a chance that the tile is not picked)
+            if(tileIsOfCorrectEssence /*&& dgen::rrange(1)*/){
+                for(const auto& sFlag : tile->spawnFlags){
+                    //if tile is of the correct spawn flag, return it
+                    if(sFlag == spawnFlag)
+                        return tile->name;
+                    //else augment loop check
+                    else innerlcheck++;
+                    //loop check has reached its limit
+                    if(innerlcheck >= 100){
+                        //change essences and try again
+                        spawnEssences = pickEssencesToSpawn();
+                        outerlcheck++;
+                        //outer loop check as reached its limit
+                        if(outerlcheck >= 100){
+                            //abort
+                            ERR("FATERR: could not find tile with the %s spawn flag", spawnFlag.c_str());
+                            terminate();
+                        }
+                        //try again with an augmented outer loop check
+                        return getTileOfSpwnFlag(spawnFlag);
+                    }
+                }
+            }
+        }
+    };
+    //convert board into floor
+    for(size_t x = 0; x < retBoard->tiles.size(); x++){
+        for(size_t y = 0; y < retBoard->tiles[0].size(); y++){
+            auto tile = board.getTile({x,y});
+            if(tile == dgen::Tile::Floor){
+                if(!dgen::rrange(1))
+                    retBoard->tiles[x][y] = getTileOfSpwnFlag("GRASS");
+                else
+                    retBoard->tiles[x][y] = getTileOfSpwnFlag("FLOOR");
+            }
+            else retBoard->tiles[x][y] = getTileOfSpwnFlag("WALL");
+        }
+    }
+    //spawn adventurer on board
+    while(!retBoard->spawn(dgen::rrange(0, width), dgen::rrange(0, height), adv));
+    //spawn some stairs
+    auto stairsNum = dgen::rrange(1,3);
+    for(size_t j = 0; j < stairsNum; ++j){
+        int x, y;
+         do{
+            x = dgen::rrange(width);
+            y = dgen::rrange(height);
+         }while(!retBoard->checkSpawn(x, y));
+         retBoard->tiles[x][y] = getTileOfSpwnFlag("DSTAIRS");
+    }
+    //return
+    return retBoard;

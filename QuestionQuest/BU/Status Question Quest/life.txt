@@ -1,0 +1,27 @@
+ID		NAME			GRA	FCLR	BCLR	MOVE_T		ESSENCE		RARITY	SPAWNLV	HP	MAN	ATT	DEF	LCK	AGI	VIS	MV1		MV2		MV3		MV4
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:
+guy		[ guy ]			@	WHITE	BLACK	USER		ADV		0	0	100	100	20	10	10	20	6 6	punch		NO		NO		NO
+[The guy that's average... average in attack, average in health, average in defence, etc, etc.]
+
+adventurer	[ adventurer ]		@	WHITE	BLACK	USER		ADV		0	0	50	100	20	5	10	50	4 4	punch		learn		NO		NO
+[Low HP and DEF and an average ATT, but very high AGI and DOD! Can grow stronger against one specific type of enemy by learning its weak points.]
+
+squadra		[ squadra ]		s	CYAN	BLACK	DUMMY		NORMAL		100	1	25	10	7	5	2	20	5 5	impale		NO		NO		NO
+[A drawing utensil that can impale anyone with its sharp point]
+
+idiot		[ idiot ]		i	WHITE	BLACK	IMMOBILE	IDIOTIC		0	0	40	10	1	1	5	20	4 4	confuse		NO		NO		NO
+[An idiot...]
+
+crazy_old_man	[ crazy old man ]	o	WHITE	BLACK	DUMMY		CRAZY		0	0	0	0	0	0	0	0	0 0	NO		NO		NO		NO
+[An old man that likes potatoes...]
+
+baggio		[ baggio ]		B	BLUE	BLACK	IMMOBILE	PHILOSOPHY	0	0	500	1000	50	50	50	75	0 0 	learn		confuse		NO		NO
+[A philosophy professor]
+
+URRS		[ URRS ]		U	YELLOW	BLACK	DUMMY		BEAR		0	0	1000	5000	500	50	60	50	6 6	roar		bombs		NO		NO
+[Stalin dressed like a bear... you couldn't find anything scarier...]
+
+quest_giver	[ quest giver ]		q	CYAN	BLACK	IMMOBILE	QUEST		0	0	0	0	0	0	0	0	0 0 	NO		NO		NO		NO
+[A quest giver]
+
+END

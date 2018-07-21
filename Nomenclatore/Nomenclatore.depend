@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1411212641 source:c:\users\stefano\documents\cartella bietolonica\programmi\c\console\nomenclatore\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1411216242 source:c:\documents and settings\stefano\documenti\programmi\c\console\nomenclatore\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1411219842 source:c:\code\c\console\nomenclatore\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

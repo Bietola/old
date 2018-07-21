@@ -1,0 +1,9 @@
+ID		NAME			ESS		SPWN_FLAGS	GRA	FCLR	BCLR	DANGER	PASSABLE/STAIRS
+--------------------------------------------------------------------------------------------------------------:
+med_floor	[hospital floor]	[MEDICINE]	[FLOOR]		.	WHITE	BLACK	0	1	0
+med_grass	[medical moss]		[MEDICINE]	[GRASS]		;	GREEN	BLACK	1	1	0
+med_wall	[hospital wall]		[MEDICINE]	[WALL]		#	WHITE	BLACK	0	0	0
+med_dstairs	[hospital down stairs]	[MEDICINE]	[DSTAIRS]	>	RED	BLACK	0	1	-1
+med_ustairs	[hospital up stairs]	[MEDICINE]	[USTARIRS]	<	RED	BLACK	0	1	1
+
+END

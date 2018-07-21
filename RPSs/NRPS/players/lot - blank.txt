@@ -1,0 +1,33 @@
+name		gender	role	fans	shit	honor
+----------------------------------------------------:
+stefano		MALE	USER	0	0	0	0
+chicco		MALE	USER	0	0	0	0
+daniele		MALE	CPU	0	0	0	0
+tina		FEMALE	CPU	0	0	0	0
+roosvelt	MALE	CPU	0	0	0	0
+sofi		FEMALE	CPU	0	0	0	0
+adolfa		FEMALE	CPU	0	0	0	0
+atena		FEMALE	CPU	0	0	0	0
+batman		MALE	CPU	0	0	0	0
+gigante		MALE	CPU	0	0	0	0
+chief		MALE	CPU	0	0	0	0
+sherlock	MALE	CPU	0	0	0	0
+mara		FEMALE	CPU	0	0	0	0
+davide		MALE	CPU	0	0	0	0
+milli		FEMALE	CPU	0	0	0	0
+nonnochuck	MALE	CPU	0	0	0	0
+jelly		NEUTRAL	CPU	0	0	0	0
+knuckles	MALE	CPU	0	0	0	0
+speakman	MALE	CPU	0	0	0	0
+steve		MALE	CPU	0	0	0	0
+richard		MALE	CPU	0	0	0	0
+Chrisphillips	MALE	CPU	0	0	0	0
+zio		MALE	CPU	0	0	0	0
+zia		FEMALE	CPU	0	0	0	0
+hitler		MALE	CPU	0	0	0	0
+cesare		MALE	CPU	0	0	0	0
+sio		MALE	CPU	0	0	0	0
+aaaahh!!	MALE	CPU	0	0	0	0
+stocazzone	MALE	CPU	0	0	0	0
+mario		MALE	CPU	0	0	0	0
+URRS		MALE	CPU	0	0	0	0

@@ -1,0 +1,80 @@
+					 TAVOLA PERIODICA
+			   *Legenda e Istruzioni per la modificazione*
+
+numero_atomico simbolo_elemento nome_elemento +n_ox-n_ox+-n_ox radice_elemento
+
+Esempio (manganese)
+
+25 Mn manganese +2+3+4+6+7 mangan
+--------------------------------------------------------------------------------------------:
+1 H idrogeno +-1
+
+2 He elio 0
+
+3 Li litio +1
+
+4 Be berillio +2
+
+5 B boro +-3+5
+
+6 C carbonio +2+-4 carbon
+
+7 N azoto +2+-3+4+5 nitr
+
+8 O ossigeno -2
+
+9 F fluoro -1 fluor
+
+10 Ne neon 0
+
+11 Na sodio +1
+
+12 Mg magnesio +2
+
+13 Al alluminio +3
+
+14 Si silicio +-4 silic
+
+15 P fosforo +-3+5 fosfor
+
+16 S zolfo -2+4+6 solfor
+
+17 Cl cloro +-1+3+5+7 clor
+
+18 Ar argon 0
+
+19 K potassio +1
+
+20 Ca calcio +2
+
+21 Sc scandio +3
+
+22 Ti titanio +2+3+4
+
+23 V vanadio +2+3+4+5
+
+24 Cr cromo +2+3+6
+
+25 Mn manganese +2+3+4+6+7 mangan
+
+26 Fe ferro +2+3 ferr
+
+27 Co cobalto +2+3
+
+28 Ni nichel +2+3
+
+29 Cu rame +1+2
+
+30 Zn zinco +2
+
+31 Ga gallio +3
+
+32 Ge germanio +2+4
+
+33 As arsenico +-3+5
+
+34 Se selenio -2+4+6
+
+35 Br bromo +-1+3+5 brom
+
+36 Kr cripton 0

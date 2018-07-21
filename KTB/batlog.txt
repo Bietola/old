@@ -1,0 +1,51 @@
+Ti.B: kill those bastards!
+Ti.B: INCOMING!!!
+Ti.B: INCOMING!!!
+Bi.S: FIRE!
+Ja.S: fire!!!
+Ky.D: fire!!
+Ti.B: fire!!!
+Bi.S: FIRE!!
+Ja.S: fIrE!
+Ky.D: FIRE!!!!!
+Ti.B: fire!!!!!
+Bi.S: FIRE!!
+Ja.S: fIrE!!!!
+Ky.D: fIrE!!
+Ti.B: fIrE!!!
+Bi.S: cannon b0 is not charged, sir!
+Ja.S: cannon b1 is not charged, sir!
+Ky.D: cannon b2 is not charged, sir!
+Ti.B: cannon b3 is not charged, sir!
+Ja.S: INCOMING!!!
+Ti.B: cannon b3 is not charged, sir!
+Bi.S: fIrE!!!!
+Ja.S: fire!!!!
+Ky.D: fire!!!!!
+Ja.S: INCOMING!!!
+Bi.S: cannon b0 is not charged, sir!
+Ja.S: cannon b1 is not charged, sir!
+Ky.D: cannon b2 is not charged, sir!
+Ti.B: fIrE!!!!
+Ti.B: INCOMING!!!
+Ti.B: cannon b3 is not charged, sir!
+Bi.S: fIrE!!
+Ja.S: fire!
+Ky.D: fIrE!!
+Ti.B: INCOMING!!!
+Bi.S: INCOMING!!!
+Bi.S: cannon b0 is not charged, sir!
+Ja.S: cannon b1 is not charged, sir!
+Ky.D: cannon b2 is not charged, sir!
+Ti.B: FIRE!!
+Bi.S: INCOMING!!!
+Ti.B: cannon b3 is not charged, sir!
+Bi.S: FIRE!!
+Ja.S: FIRE!!
+Ky.D: FIRE!!!!
+Bi.S: INCOMING!!!
+Bi.S: FIRE!!
+Ja.S: FIRE!!
+Ky.D: FIRE!
+Ti.B: fire!
+Ti.B: INCOMING!!!

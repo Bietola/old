@@ -1,0 +1,5 @@
+
+metodo:
+	nome: AreaRettangolo
+	procedimento:
+		rettangolo.area=rettangolo.base*reattangolo.altezza

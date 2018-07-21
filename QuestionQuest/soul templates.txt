@@ -1,0 +1,7 @@
+ID				SOUL CONCENTRATIONS LIST
+-----------------------------------------------------------------:
+st_human			[EARTH 20 FIRE 20 AIR 20 WATER 20 FUSION 20]
+st_utensil			[EARTH 20 PLASTIC 40 MATH 10 ART 10 FUSION 20]
+st_medical			[MEDICINE 80 SCIENCE 10 FUSION 10]
+
+END

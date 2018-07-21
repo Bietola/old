@@ -1,0 +1,27 @@
+ID		NAME		SINVERB		PLVERB	ESS			QESS		QDIF	MAN	ACT		AGI	CHANCE
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:
+punch		punch		punches		punch	[ FORCE PAIN ]		[ ]		0	0	[ DAM ]		-1	100
+[.]
+[DUR(A);ATT(1.2).]
+[.]
+[punches the enemy! Basic, but reliable. Adapts to agi.]
+
+learn		learn		learns		learn	[ MIND ]		[ OPT ALL ]	1	10	[ ]		0	100
+[DUR(A);NMN(1).]
+[DUR(B);ATT(1.2);DEF(1.1).]
+[.]
+[attempts to learn the enemy's weak point, increasing attack permanently if sucessfull. Blocked by a high INT and SRT.]
+ 
+impale		impale		impales		impale	[ FORCE PAIN ]		[ OPT MATH ]	1	5	[ DAM ]		40	100
+[.]
+[DUR(A);ATT(1.2).]
+[DUR(B);DEF(0.8).]
+[impales an enemy, hurting him and decreasing its defense.]
+
+confuse 	confuse		confuses	confuse	[ IDIOTIC ]		[ ]		0	3	[ ]		0	100
+[.]
+[.]
+[DUR(B);DEF(0.5).]
+[confuses the enemy, greatly decreasing its defence]
+
+END

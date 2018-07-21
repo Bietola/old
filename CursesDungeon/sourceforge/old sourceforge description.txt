@@ -1,0 +1,4 @@
+The games has three major flaws (if we ignore the fact that it can barely be called an actual game :D)
+-All of its code is written on a single file (main.cpp), and this will be the first thing that I will change if I decide to continue working on this.
+-Enemies are stupid... they follow the player regardless of the obstacles separating them from him/her.
+-The ground is too randomly generated, in the future I will change the code to allow the creation of actual rooms and corridors.
