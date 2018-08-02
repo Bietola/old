@@ -281,8 +281,8 @@ dgen::perc_t dgen::Board::generate(const dgen::GenInfo &ginf, std::ostream &dbLo
                             Rect corrRect;
                             corrRect.x = std::max(1 , newCorridorPos.x-1);
                             corrRect.y = std::max(1 , newCorridorPos.y-1);
-                            int crwx = std::min(width-1 , (unsigned int)newCorridorPos.x+1);
-                            int crhy = std::min(height-1 , (unsigned int)newCorridorPos.y+1);
+                            int crwx = std::min(width-1 , (size_t)newCorridorPos.x+1);
+                            int crhy = std::min(height-1 , (size_t)newCorridorPos.y+1);
                             corrRect.w = crwx - corrRect.x + 1;
                             corrRect.h = crhy - corrRect.y + 1;
                             //check if corridor is perforating a room

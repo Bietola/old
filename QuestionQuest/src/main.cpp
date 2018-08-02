@@ -40,7 +40,7 @@ typedef string TILE;
 typedef string TILESPWNFLAG;
 
 ///macro functions
-#define ERR(fstr,f) \
+#define PRINTERR(fstr,f) \
     {clear(); \
     mvprintw(0,0,fstr,f); \
     getch();}
@@ -141,7 +141,7 @@ Essence *search_essence(string name){
     for(int j=0;j<gEssences.size();j++){
         if(gEssences[j]->name==name) return gEssences[j];
     }
-    ERR("ERROR: no %s essence found",name.c_str());
+    PRINTERR("ERROR: no %s essence found",name.c_str());
     return NULL;
 }
 ///soul class
@@ -217,7 +217,7 @@ class SoulTemplate{
                 if(!search_essence(s)){
                     stringstream ess;
                     ess << "ERR: no \"" << s << "\" essence found in \"" << id << "\" template";
-                    ERR("%s",ess.str().c_str());
+                    PRINTERR("%s",ess.str().c_str());
                 }
                 ss >> n;
                 essConcs.push_back({s,n});
@@ -238,7 +238,7 @@ SoulTemplate *search_soul_template(string id){
     for(vector<SoulTemplate*>::iterator i=gSoulTemplates.begin();i<gSoulTemplates.end();i++){
         if((*i)->id==id) return *i;
     }
-    ERR("ERR: nonexistent soul template id searched (%s)",id.c_str());
+    PRINTERR("ERR: nonexistent soul template id searched (%s)",id.c_str());
     return NULL;
 }
 ///effect class
@@ -548,7 +548,7 @@ Tile* search_tile(string id){
     for(int j=0;j<gTiles.size();j++){
         if(gTiles[j]->id==id) return gTiles[j];
     }
-    ERR("could not find [%s] tile",id.c_str());
+    PRINTERR("could not find [%s] tile",id.c_str());
     assert(false);
     return NULL;
 }
@@ -721,7 +721,7 @@ BodyTemplate *search_body_template(string id){
     for(vector<BodyTemplate*>::iterator i=bodyTemplates.begin();i<bodyTemplates.end();i++){
         if((*i)->id==id) return *i;
     }
-    ERR("ERR: nonexistent body template id searched (%s)",id.c_str());
+    PRINTERR("ERR: nonexistent body template id searched (%s)",id.c_str());
     return NULL;
 }
 
@@ -780,7 +780,7 @@ Item *search_item(string id){
     for(vector<Item*>::iterator i=items.begin();i<items.end();i++){
         if((*i)->id==id) return *i;
     }
-    ERR("ERR: searched nonexistent item id (%s)",id.c_str());
+    PRINTERR("ERR: searched nonexistent item id (%s)",id.c_str());
     return NULL;
 }
 
@@ -1199,7 +1199,7 @@ Life *search_life(string id){
     for(vector<Life*>::iterator i=life.begin();i<life.end();i++){
         if((*i)->id==id) return *i;
     }
-    ERR("%s",id.c_str());
+    PRINTERR("%s",id.c_str());
     assert(0);
     return NULL;
 }
@@ -1689,7 +1689,7 @@ void Life::speak(){
         }
     }
     else err=true;
-    if(err) ERR("%s not recognized as a REC value",s.c_str());
+    if(err) PRINTERR("%s not recognized as a REC value",s.c_str());
 }
 
 /*
@@ -1766,7 +1766,7 @@ Tile Board::getTile(int x,int y){
     if(x > tiles.size() || y > tiles[0].size()){
         std::stringstream ss;
         ss << "coordinates out of bounds: (" << x << "; " << y << ")" << " max: (" << tiles.size() << "; " << tiles[0].size() << ")";
-        ERR("%s", ss.str().c_str());
+        PRINTERR("%s", ss.str().c_str());
     }
     return *search_tile(tiles[x][y]);
 }
@@ -1904,7 +1904,7 @@ int Board::move(){
                             ss << "essence: " << getTile(fx,fy).essence << "\n";
                             ss << "danger: " << getTile(fx,fy).danger << "\n";
                             ss << "loop checks: essence(" << lcEssence << "); highSpawnLv(" << lcHighSpawnLv << "); rarity(" << lcRarity << ")\n";
-                            ERR("%s",ss.str().c_str());
+                            PRINTERR("%s",ss.str().c_str());
                         }
                     }
                 }
@@ -2165,7 +2165,7 @@ AttMove *search_move(string id){
     for(vector<AttMove*>::iterator i=attMoves.begin();i<attMoves.end();i++){
         if((*i)->id==id) return *i;
     }
-    ERR("ERR: attempt to call a nonexistent move id (%s)",id.c_str());
+    PRINTERR("ERR: attempt to call a nonexistent move id (%s)",id.c_str());
     return NULL;
 }
 //load all questions
@@ -2221,7 +2221,7 @@ void load_essence(const char *dirName){
             if(c!='['){
                 stringstream ess;
                 ess << "FATAL ERROR: " << c << " is supposed to be a \"[\" in file \"" << dirnt->d_name << "\" in the " << dirName << " directory.";
-                ERR("%s",ess.str().c_str());
+                PRINTERR("%s",ess.str().c_str());
             }
             assert(c=='[');
             while(true){
@@ -2239,7 +2239,7 @@ void load_essence(const char *dirName){
     for(int j=0;j<gEssences.size();j++){
         for(int k=0;k<gEssences.size();k++){
             if(gEssences[j]->name==gEssences[k]->name && k!=j){
-                ERR("FATAL ERROR: found double %s essence name.",gEssences[j]->name.c_str());
+                PRINTERR("FATAL ERROR: found double %s essence name.",gEssences[j]->name.c_str());
                 assert(false);
             }
         }
@@ -2330,9 +2330,9 @@ void load_moves(const char *fileName){
 //load all tiles
 void load_tiles(const char* fName){
     //open directory
-    DIR *dir = opendir("tiles");
+    DIR *dir = opendir("assets/tiles");
     if(dir == nullptr){
-        ERR("%s", "could not open tiles directory");
+        PRINTERR("%s", "could not open tiles directory");
         assert(false);
     }
     //go through directory file
@@ -2388,7 +2388,7 @@ void load_tiles(const char* fName){
             //get id
             f >> id;
             //check loop safety
-            if(j == 1000) ERR("%s","loop limit reached (1000) when loading tiles");
+            if(j == 1000) PRINTERR("%s","loop limit reached (1000) when loading tiles");
         }
     }
 }
@@ -2555,7 +2555,7 @@ void load_life(const char *fileName){
                 if(search_essence(s)==NULL){
                     stringstream ess;
                     ess << "ERR: essence " << s << ", associated with life " << l.name << " does not exist.";
-                    ERR("%s",ess.str().c_str());
+                    PRINTERR("%s",ess.str().c_str());
                 }
                 f >> n;
                 l.soul.setEssenceVal(s,n);
@@ -2602,7 +2602,7 @@ void load_dialog(const char *fileName){
     while(true){
         f >> s;
         if(s=="END") break;
-        if((l=search_life(s))==NULL){ERR("%s is not a life id.",s.c_str());}
+        if((l=search_life(s))==NULL){PRINTERR("%s is not a life id.",s.c_str());}
         else{
             f >> s;
             while(s==":"){
@@ -2647,7 +2647,7 @@ void load_dialog(const char *fileName){
                         continue;
                     }
                     else{
-                        ERR("%s not a valid dialog instruction in NODE read mode",s.c_str());
+                        PRINTERR("%s not a valid dialog instruction in NODE read mode",s.c_str());
                     }
                 }
                 else if(rm==RM_LINKS){
@@ -2667,7 +2667,7 @@ void load_dialog(const char *fileName){
                         continue;
                     }
                     else{
-                        ERR("%s not a valid dialog instruction in LINKS read mode",s.c_str());
+                        PRINTERR("%s not a valid dialog instruction in LINKS read mode",s.c_str());
                     }
                 }
                 else if(rm==RM_RET){
@@ -2678,7 +2678,7 @@ void load_dialog(const char *fileName){
                         continue;
                     }
                     else{
-                        ERR("%s not a valid dialog instruction in RET read mode",s.c_str());
+                        PRINTERR("%s not a valid dialog instruction in RET read mode",s.c_str());
                     }
                 }
             }
@@ -2703,15 +2703,15 @@ int main()
     menuUpKey=MC_UP;
     menuDownKey=MC_DOWN;
     //load stuff
-    load_essence("essences");
-    load_tiles("tiles.txt");
-    load_soul_templates("soul templates.txt");
-    load_questions("questions.txt");
-    load_moves("moves.txt");
-    load_body_templates("body templates.txt");
-    load_items("items.txt");
-    load_life("life.txt");
-    load_dialog("dialog.txt");
+    load_essence("assets/essences");
+    load_tiles("assets/tiles.txt");
+    load_soul_templates("assets/soul templates.txt");
+    load_questions("assets/questions.txt");
+    load_moves("assets/moves.txt");
+    load_body_templates("assets/body templates.txt");
+    load_items("assets/items.txt");
+    load_life("assets/life.txt");
+    load_dialog("assets/dialog.txt");
     //initialize and set adventurer
     adv=new Life(*(search_life("adventurer")));
     //initialize dungeon

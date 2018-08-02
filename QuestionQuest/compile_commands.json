@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/dincio/code/old/QuestionQuest/build",
+  "command": "/usr/bin/c++   -I/home/dincio/code/old/QuestionQuest/src    -Wall -std=gnu++1z -o CMakeFiles/Proj.dir/src/DungeonGenerator/dungeon_generator.cpp.o -c /home/dincio/code/old/QuestionQuest/src/DungeonGenerator/dungeon_generator.cpp",
+  "file": "/home/dincio/code/old/QuestionQuest/src/DungeonGenerator/dungeon_generator.cpp"
+},
+{
+  "directory": "/home/dincio/code/old/QuestionQuest/build",
+  "command": "/usr/bin/c++   -I/home/dincio/code/old/QuestionQuest/src    -Wall -std=gnu++1z -o CMakeFiles/Proj.dir/src/Status.cpp.o -c /home/dincio/code/old/QuestionQuest/src/Status.cpp",
+  "file": "/home/dincio/code/old/QuestionQuest/src/Status.cpp"
+},
+{
+  "directory": "/home/dincio/code/old/QuestionQuest/build",
+  "command": "/usr/bin/c++   -I/home/dincio/code/old/QuestionQuest/src    -Wall -std=gnu++1z -o CMakeFiles/Proj.dir/src/data_read.cpp.o -c /home/dincio/code/old/QuestionQuest/src/data_read.cpp",
+  "file": "/home/dincio/code/old/QuestionQuest/src/data_read.cpp"
+},
+{
+  "directory": "/home/dincio/code/old/QuestionQuest/build",
+  "command": "/usr/bin/c++   -I/home/dincio/code/old/QuestionQuest/src    -Wall -std=gnu++1z -o CMakeFiles/Proj.dir/src/main.cpp.o -c /home/dincio/code/old/QuestionQuest/src/main.cpp",
+  "file": "/home/dincio/code/old/QuestionQuest/src/main.cpp"
+},
+{
+  "directory": "/home/dincio/code/old/QuestionQuest/build",
+  "command": "/usr/bin/c++   -I/home/dincio/code/old/QuestionQuest/src    -Wall -std=gnu++1z -o CMakeFiles/Proj.dir/src/menu.cpp.o -c /home/dincio/code/old/QuestionQuest/src/menu.cpp",
+  "file": "/home/dincio/code/old/QuestionQuest/src/menu.cpp"
+}
+]
