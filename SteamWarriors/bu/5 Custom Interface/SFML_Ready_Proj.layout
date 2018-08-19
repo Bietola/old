@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="src\json\jsoncpp.cpp" open="1" top="0" tabpos="91" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="93122" topLine="3110" />
+		</Cursor>
+	</File>
+	<File name="src\SpecialMove.h" open="1" top="0" tabpos="92" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="127" topLine="33" />
+		</Cursor>
+	</File>
+	<File name="src\utils.h" open="1" top="0" tabpos="67" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="365" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\MediaProvider.cpp" open="1" top="0" tabpos="74" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Staus.cpp" open="1" top="0" tabpos="96" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="440" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="src\utils\graphics.cpp" open="1" top="0" tabpos="98" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\AI.h" open="1" top="0" tabpos="105" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="67" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\DialogHandler.h" open="1" top="0" tabpos="116" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="237" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\utils\graphics.h" open="1" top="0" tabpos="97" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="81" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\World.cpp" open="1" top="0" tabpos="63" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4863" topLine="111" />
+		</Cursor>
+	</File>
+	<File name="src\Status.h" open="1" top="0" tabpos="77" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="443" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\globals.cpp" open="1" top="0" tabpos="102" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="608" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\AI.cpp" open="1" top="0" tabpos="106" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="295" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Tile.h" open="1" top="0" tabpos="60" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="836" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\interface\Button.cpp" open="1" top="0" tabpos="81" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="385" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Entity.h" open="1" top="0" tabpos="71" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1103" topLine="26" />
+		</Cursor>
+	</File>
+	<File name="src\interface\PictureBox.cpp" open="1" top="0" tabpos="82" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="574" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="src\interface\Interface.cpp" open="1" top="0" tabpos="79" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1671" topLine="38" />
+		</Cursor>
+	</File>
+	<File name="src\EntityMaker.cpp" open="1" top="0" tabpos="100" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="509" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\interface\TransBox.h" open="1" top="0" tabpos="80" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="613" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\EntityMaker.h" open="1" top="0" tabpos="99" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="641" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\interface\PictureBox.h" open="1" top="0" tabpos="86" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="456" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="src\DialogTree.cpp" open="1" top="0" tabpos="113" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1110" topLine="30" />
+		</Cursor>
+	</File>
+	<File name="src\interface\Container.cpp" open="1" top="0" tabpos="108" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\moves.cpp" open="1" top="0" tabpos="104" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="367" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Tile.cpp" open="1" top="0" tabpos="61" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="366" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\globals.h" open="1" top="0" tabpos="101" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="343" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\World.h" open="1" top="0" tabpos="62" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2547" topLine="45" />
+		</Cursor>
+	</File>
+	<File name="src\interface\Button.h" open="1" top="0" tabpos="109" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="998" topLine="20" />
+		</Cursor>
+	</File>
+	<File name="src\Entity.cpp" open="1" top="0" tabpos="72" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1143" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Handler.h" open="1" top="0" tabpos="69" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="75" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\interface\TextBox.cpp" open="1" top="0" tabpos="83" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="387" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\actions.cpp" open="1" top="0" tabpos="76" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1557" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\interface\TextBox.h" open="1" top="0" tabpos="85" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1005" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\actions.h" open="1" top="0" tabpos="75" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="112" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Animation.h" open="1" top="0" tabpos="87" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1760" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="src\media.h" open="1" top="0" tabpos="65" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="298" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Describable.h" open="1" top="0" tabpos="95" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="407" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\interface\Interface.h" open="1" top="0" tabpos="78" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2453" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Handler.cpp" open="1" top="0" tabpos="70" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="249" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\AnimationHandler.cpp" open="1" top="0" tabpos="90" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="702" topLine="5" />
+		</Cursor>
+	</File>
+	<File name="src\interface\Cotnainer.h" open="1" top="0" tabpos="107" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\DialogHandler.cpp" open="1" top="0" tabpos="114" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1417" topLine="11" />
+		</Cursor>
+	</File>
+	<File name="src\moves.h" open="1" top="0" tabpos="103" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="124" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Effect.h" open="1" top="0" tabpos="94" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="391" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\interface\Bar.cpp" open="1" top="0" tabpos="111" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="556" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\MatchHandler.cpp" open="1" top="0" tabpos="73" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="336" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\media.cpp" open="1" top="0" tabpos="66" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1079" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="src\Animation.cpp" open="1" top="0" tabpos="88" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1169" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\utils.cpp" open="1" top="0" tabpos="68" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="400" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\MatchHandler.h" open="1" top="0" tabpos="115" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="155" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\json\json.h" open="0" top="0" tabpos="38" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10270" topLine="249" />
+		</Cursor>
+	</File>
+	<File name="src\MediaProvider.h" open="1" top="0" tabpos="64" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4023" topLine="95" />
+		</Cursor>
+	</File>
+	<File name="src\interface\Bar.h" open="1" top="0" tabpos="110" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="678" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\AnimationHandler.h" open="1" top="0" tabpos="89" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="323" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\interface\TransBox.cpp" open="1" top="0" tabpos="84" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\DialogTree.h" open="1" top="0" tabpos="112" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="292" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\main.cpp" open="1" top="1" tabpos="59" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="785" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\SpecialMove.cpp" open="1" top="0" tabpos="93" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="393" topLine="36" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

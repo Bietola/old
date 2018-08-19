@@ -1,0 +1,22 @@
+{
+	"name" : "halo monster",
+	"description" : "a halo monster",
+	"faction" : "friend",
+	"ai" : "Dummy",
+	"dialog" : "crazy_old_man",
+	"status" : {
+		"max-life" : 10,
+		"life" : 10,
+		"strength" : 1,
+		"toughness" : 2,
+		"agility" : 3,
+		"speed" : 1,
+		"recovery" : 0.5,
+		"luck" : 5,
+		"smartness" : 6,
+		"intelligence" : 7
+	},
+	"animation" : {
+		"idle" : "halo_mon_idle"
+	}
+}

@@ -1,0 +1,71 @@
+{
+	"visits" : {
+		"1" : {
+			"dialog" : [
+				"Hello there! My name is Tutorial Guy and I'm here for...",
+				"Well I'm here for...",
+				"for....",
+				"...",
+				"You know what? I forgot!",
+				"So why don't you just continue aimlessly killing monsters.",
+				"that seems just about right"
+			]
+		},
+		"2" : {
+			"dialog" : [
+				"What, you don't know how to kill monsters?",
+				"Well, just bump into them!",
+				"It's quite easy really...",
+				"Then, when they're dead, just pick up their items!",
+				"Acquiring them will make you want more items...",
+				"Which in turn will make you want to kill more monsters.",
+				"And then 10 hours will pass...",
+				"And you will still have to study for the exam you have tommorrow...",
+				"But I guess that's life!",
+				"Anyway, you should also remember to equip your items",
+				"Otherwise, they'll be quite useless."
+			]
+		},
+		"3" : {
+			"dialog" : [
+				"What? You can't even equip items?!",
+				"You're a disaster! How did you manage to live until now?",
+				"Well somebody around here gotta teach you somethin' abount life kid..."
+			]
+		},
+		"4" : {
+			"dialog" : [
+				"What? Me?",
+				"You're giving me a headache... allright, I'll explain everything you need to know about items"
+			],
+			"decisions" : {
+				"Let's fight!" : {
+					"dialog" : "Are you sure?",
+					"decisions" : {
+						"yes" : {
+							"dialog" : "event:fight"
+						},
+						"no" : {
+							"dialog" : "ok then..."
+						}
+					}
+				},
+				"Please continue, I would never interrupt such a wonderfull voice" : {
+					"dialog" : [
+						"Oh...",
+						"I have to admit I am quite flatterd by your words",
+						"Still, your inexperience troubles me...",
+						"That's why I think it will be best if I fought you...",
+						"Nothing personal, but if you die",
+						"Well that means that you would die afterwards anyway!",
+						"So be it...",
+						"But if you do win...",
+						"Then you will be worthy of this world!",
+						"EN GAURDE!",
+						"event:fight"
+					]
+				}
+			}
+		}
+	}
+}

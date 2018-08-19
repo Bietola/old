@@ -1,0 +1,79 @@
+//physics functions
+void Entity::updatePhysics(float time, World& world){
+    auto delta = sf::Vector2f(mVelocity.x * time, mVelocity.y * time);
+    auto boundingRect = getTransform().transformRect(mSprite.getGlobalBounds());
+    boundingRect.left += delta.x;
+    boundingRect.top  += delta.y;
+    auto makeTileBoundingRect = [&boundingRect](){
+        return sf::IntRect(boundingRect.left   / World::TILE_WIDTH,
+                            boundingRect.top    / World::TILE_HEIGHT,
+                            boundingRect.width  / World::TILE_WIDTH,
+                            boundingRect.height / World::TILE_HEIGHT);
+    };
+    auto tileBoundingRect = makeTileBoundingRect();
+    for(int x = 0; x < world.getSize().x; x++){
+        for(int y = 0; y < world.getSize().y; y++){
+            if(!gUpTileModels[world.getTile({x, y}).up].passable){
+                sf::FloatRect tileRect = {x * World::TILE_WIDTH, y * World::TILE_HEIGHT, World::TILE_WIDTH, World::TILE_HEIGHT};
+                if(boundingRect.left > tileRect.left && boundingRect.left < tileRect.left + tileRect.width &&
+                   boundingRect.top  > tileRect.top  && boundingRect.top  < tileRect.top  + tileRect.height){
+                    if(delta.x != 0)
+                        boundingRect.left = tileRect.left + tileRect.width;
+                    if(delta.y != 0)
+                        boundingRect.top = tileRect.top + tileRect.height;
+                }
+                if(tileRect.left > boundingRect.left && tileRect.left < boundingRect.left + boundingRect.width &&
+                   tileRect.top  > boundingRect.top  && tileRect.top  < boundingRect.top  + boundingRect.height){
+                    if(delta.x != 0)
+                        boundingRect.left = tileRect.left - boundingRect.width;
+                    if(delta.y != 0)
+                        boundingRect.top = tileRect.top - boundingRect.height;
+                }
+            }
+        }
+    }
+    setPosition({boundingRect.left, boundingRect.top});
+    /*!
+    auto delta = sf::Vector2f(mVelocity.x * time, mVelocity.y * time);
+    auto boundingRect = getTransform().transformRect(mSprite.getGlobalBounds());
+    boundingRect.left += delta.x;
+    boundingRect.top  += delta.y;
+    auto makeTileBoundingRect = [&boundingRect](){
+        return sf::IntRect(boundingRect.left   / World::TILE_WIDTH,
+                            boundingRect.top    / World::TILE_HEIGHT,
+                            boundingRect.width  / World::TILE_WIDTH,
+                            boundingRect.height / World::TILE_HEIGHT);
+    };
+    auto tileBoundingRect = makeTileBoundingRect();
+    if(!gUpTileModels[world.getTile({tileBoundingRect.left, tileBoundingRect.top}).up].passable && (mVelocity.x != 0 || mVelocity.y != 0)){
+        if(mVelocity.x != 0)
+            boundingRect.left = (++tileBoundingRect.left) * World::TILE_WIDTH;
+        if(mVelocity.y != 0)
+            boundingRect.top  = (++tileBoundingRect.top)  * World::TILE_HEIGHT;
+    }
+    if(!gUpTileModels[world.getTile({tileBoundingRect.left + tileBoundingRect.width, tileBoundingRect.top}).up].passable && (mVelocity.x != 0 || mVelocity.y != 0)){
+        if(mVelocity.x != 0){
+            boundingRect.left = (boundingRect.left + boundingRect.width) / World::TILE_WIDTH * World::TILE_WIDTH - boundingRect.width;
+            tileBoundingRect = makeTileBoundingRect();
+        }
+        if(mVelocity.y != 0)
+            boundingRect.top  = (++tileBoundingRect.top)  * World::TILE_HEIGHT;
+    }
+    if(!gUpTileModels[world.getTile({tileBoundingRect.left + tileBoundingRect.width, tileBoundingRect.top + tileBoundingRect.height}).up].passable && (mVelocity.x != 0 || mVelocity.y != 0)){
+        if(mVelocity.x != 0)
+            boundingRect.left = (tileBoundingRect.left+1) * World::TILE_WIDTH - boundingRect.width;
+        if(mVelocity.y != 0)
+            boundingRect.top  = (tileBoundingRect.top+1)  * World::TILE_HEIGHT - boundingRect.height;
+        tileBoundingRect = makeTileBoundingRect();
+    }
+    if(!gUpTileModels[world.getTile({tileBoundingRect.left, tileBoundingRect.top + tileBoundingRect.height}).up].passable && (mVelocity.x != 0 || mVelocity.y != 0)){
+        if(mVelocity.x != 0)
+            boundingRect.left = (++tileBoundingRect.left) * World::TILE_WIDTH;
+        if(mVelocity.y != 0){
+            boundingRect.top  = (tileBoundingRect.top+1)  * World::TILE_HEIGHT - boundingRect.height;
+            tileBoundingRect = makeTileBoundingRect();
+        }
+    }
+    setPosition({boundingRect.left, boundingRect.top});
+    */
+}

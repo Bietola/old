@@ -1,0 +1,27 @@
+{
+	"name" : "tutorial guy",
+	"description" : "a guy that smells like tutorial...",
+	"faction" : "friend",
+	"dialog" : "tutorial_guy",
+	"status" : {
+		"max-life" : 10,
+		"life" : 10,
+		"strength" : 1,
+		"toughness" : 2,
+		"agility" : 3,
+		"speed" : 1,
+		"luck" : 5,
+		"smartness" : 6,
+		"intelligence" : 7
+	},
+	"animation" : {
+		"idle" : {
+			"texture" : "kenney_characters",
+			"isLooping" : true,
+			"speed" : 0,
+			"frameRects" : [
+				[17, 17, 16, 16]
+			]
+		}
+	}
+}

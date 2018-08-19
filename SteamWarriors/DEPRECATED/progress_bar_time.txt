@@ -1,0 +1,28 @@
+int main()
+{
+    start_game();
+    Interface interface(sf::FloatRect(0, 0, 500, 100));
+    auto func = [clock = sf::Clock(), itr = 0]() mutable {
+        if(int(clock.getElapsedTime().asMilliseconds()) > 1000) {
+            itr++;
+            clock.restart();
+        }
+        return itr;
+    };
+    interface.addChildRelative<gr::Bar>("bar", sf::FloatRect(0, 0, 1, 1), func, 20);
+    sf::Event e;
+    while(gWindow.isOpen())
+    {
+        while(gWindow.pollEvent(e))
+        {
+            if(e.type == sf::Event::Closed)
+                gWindow.close();
+            interface.handleEvent(e);
+        }
+        interface.update(gWindow);
+        gWindow.clear();
+        gWindow.draw(interface);
+        gWindow.display();
+    }
+    return 0;
+}

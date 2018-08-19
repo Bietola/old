@@ -1,0 +1,52 @@
+//Formule per il calcolo dei danni.
+//ho volutamente tenuto le formule il più semplice possibile, per poter avere un idea di come potrebbero essere, poi verranno modificate e inseriti i numeri in base alle statistiche.
+
+//DANNO FISICO
+
+	danno=attacco*(100/(100+armor))
+//formula asintotica, ogni punto di armor da meno benificio di quella precedente, in modo da non arrivare mai a una riduzione dei danni del 100%
+
+//DANNO MAGICO
+
+	danno=magia*(100/(100+res. magica))
+//come per danno fisico.
+
+//VELENO
+//3 versioni:
+
+1)	danno totale(5 turni) = 15% max vita nemico.
+	danno per turno = 3% max vita nemico.
+//versione sulla vita massima del nemico, non affetta da magia o difese.
+
+2)	danno per turno = 5% della vita attuale del nemico
+	danno totale(supponendo vita piena)(5 turni) = circa 23% della vita. (se ho fatto i calcoli giusti... ahahah)
+	danno totale(supponendo 50% vita)(5 turni) = circa 11,5% della vita.
+//il veleno fa più danni ai nemici con vita piena, e meno danni a quelli già mezzi morti. con questa versione il nemico non può morire per il veleno. si può aggiungere un picclo danno di base
+//e la formula diventa tipo: 5 + 5% della vita attuale del nemico, e il veleno infliggerà sempre un minimo di 25 danni fissi.
+
+3)	danno per turno = 5% della vita mancante dell'avversario
+	danno totale (vita piena) = 0;
+	danno totale (vita 50%)(5 turni) = circa 14% della vita.
+//il veleno diventa man mano più letale mentre il nemico perde vita, ma a vita piena non fa danni.
+
+//se proprio non vi piacciono i danni sulla vita, allora:
+	danno per turno = DANNO MAGICO con magia*0,1.
+	danno totale per 5 turni = 50% della magia.
+
+//AGILITA'
+//agatt = agilità dell'attaccante, agdef = agilità del difensore
+
+
+	precisione = agatt/(agdef+30%)
+//precisione >=1 colpisce sempre.
+
+// agdef+30% per evitare che 2 con pari agilità si colpiscano sempre.
+// se entrambi hanno agilità uguale allora l'attaccante ha circa il 76% di probabilità di colpire.
+// se agatt = 50 e agdef = 100, precisione = 0,38 -> 38% probabilità di colpire.
+// caso particolare agdef=0 -> l'attaccante colpisce sempre.
+// se precisione < 0,3, la consideriamo come 0,3 per evitare che un nemico debole non colpisca mai.
+
+
+//FORTUNA
+
+//WIP!

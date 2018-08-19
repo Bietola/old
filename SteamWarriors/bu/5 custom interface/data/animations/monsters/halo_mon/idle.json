@@ -1,0 +1,10 @@
+{
+	"texture" : "halo_mon",
+	"isLooping" : true,
+	"speed" : 5,
+	"frameRects" : [
+		[0, 0, 64, 64],
+		[64, 0, 64, 64],
+		[128, 0, 64, 64]
+	]
+}

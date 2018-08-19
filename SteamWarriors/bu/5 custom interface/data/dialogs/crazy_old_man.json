@@ -1,0 +1,47 @@
+{
+	"text" : "I like potatoes when they're good! Do you like 'em, too?",
+	"branch" : {
+		"decision" : "hum... yes, I guess...",
+		"text" : "me too, me too!!! he he he!",
+		"you" : "ok..."
+	},
+	"branch" : {
+		"decision" : "well of course I do, old man!",
+		"text" : "me not old man... you mean guy",
+		"you" : "sorry...",
+		"text" : "he he he!",
+		"you" : "that's how I like you, old man!",
+		"text" : "old man, old man, old man, oooooooooold maaaaaaan!!!",
+		"you" : "yhei! old man!"
+	},
+	"branch" : {
+		"decision" : "if they're good how would anybody not like them?",
+		"text" : "...",
+		"you" : "you ok?",
+		"text" : "...",
+		"you" : "hello?",
+		"text" : "...",
+		"text" : ".................",
+		"you" : "Well, the concept must have been too difficult for his mind to b.....",
+		"text" : "BAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHH!!!!!!!!!!!",
+		"you" : "WHAT THE?!?",
+		"text" : "POTATOES!!!",
+		"text" : "ARE!!!",
+		"text" : "GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOD!!!!!",
+		"you" : "I guess you'll never stop surprising me, old man.",
+		"text" : "popopopotatotoestotoespotatotopotatoes....."
+	},
+	"branch" : {
+		"decision" : "well, maybe they're good to me, but not to you, dumbass",
+		"you" : "You could say that, but then again... wait, what did you just call me?!",
+		"text" : "dumbass!",
+		"you" : "You say that one more time!",
+		"text" : "dumb",
+		"text" : "ass",
+		"text" : "dumbass, dumbass, dumbass!!",
+		"you" : "You know what, I'm done talking to you, good bye.",
+		"text" : "Goodbye, dumbass.",
+		"you" : "...",
+		"text" : "he he he!"
+	}
+}

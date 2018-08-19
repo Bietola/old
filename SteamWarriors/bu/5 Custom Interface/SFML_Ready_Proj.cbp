@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SFML_Ready_Proj" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SFML_Ready_Proj" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SFML_Ready_Proj" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-ltgui" />
+					<Add option="-lsfml-graphics" />
+					<Add option="-lsfml-window" />
+					<Add option="-lsfml-system" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add option="-fexceptions" />
+			<Add directory="C:/Libraries/sfml/include" />
+			<Add directory="C:/Libraries/Boost" />
+			<Add directory="C:/Libraries/jsoncpp/github/jsoncpp-master/dist" />
+			<Add directory="C:/Libraries/TGUI/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-lsfml-graphics" />
+			<Add option="-lsfml-window" />
+			<Add option="-lsfml-system" />
+			<Add option="-ltgui" />
+			<Add library="C:/Libraries/Boost/release/boost/bin.v2/libs/system/build/gcc-mingw-6.3.0/release/libboost_system-mgw63-1_63.dll.a" />
+			<Add library="C:/Libraries/Boost/release/boost/bin.v2/libs/filesystem/build/gcc-mingw-6.3.0/release/libboost_filesystem-mgw63-1_63.dll.a" />
+			<Add directory="C:/Libraries/sfml/lib" />
+			<Add directory="C:/Libraries/TGUI/lib" />
+		</Linker>
+		<Unit filename="src/AI.cpp" />
+		<Unit filename="src/AI.h" />
+		<Unit filename="src/Animation.cpp" />
+		<Unit filename="src/Animation.h" />
+		<Unit filename="src/AnimationHandler.cpp" />
+		<Unit filename="src/AnimationHandler.h" />
+		<Unit filename="src/Describable.h" />
+		<Unit filename="src/DialogHandler.cpp" />
+		<Unit filename="src/DialogHandler.h" />
+		<Unit filename="src/DialogTree.cpp" />
+		<Unit filename="src/DialogTree.h" />
+		<Unit filename="src/Effect.h" />
+		<Unit filename="src/Entity.cpp" />
+		<Unit filename="src/Entity.h" />
+		<Unit filename="src/EntityMaker.cpp" />
+		<Unit filename="src/EntityMaker.h" />
+		<Unit filename="src/Handler.cpp" />
+		<Unit filename="src/Handler.h" />
+		<Unit filename="src/MatchHandler.cpp" />
+		<Unit filename="src/MatchHandler.h" />
+		<Unit filename="src/MediaProvider.cpp" />
+		<Unit filename="src/MediaProvider.h" />
+		<Unit filename="src/SpecialMove.cpp" />
+		<Unit filename="src/SpecialMove.h" />
+		<Unit filename="src/Status.h" />
+		<Unit filename="src/Staus.cpp" />
+		<Unit filename="src/Tile.cpp" />
+		<Unit filename="src/Tile.h" />
+		<Unit filename="src/World.cpp" />
+		<Unit filename="src/World.h" />
+		<Unit filename="src/actions.cpp" />
+		<Unit filename="src/actions.h" />
+		<Unit filename="src/globals.cpp" />
+		<Unit filename="src/globals.h" />
+		<Unit filename="src/interface/Bar.cpp" />
+		<Unit filename="src/interface/Bar.h" />
+		<Unit filename="src/interface/Button.cpp" />
+		<Unit filename="src/interface/Button.h" />
+		<Unit filename="src/interface/ButtonFunctionalities/ButtonFuncClip.cpp" />
+		<Unit filename="src/interface/ButtonFunctionalities/ButtonFuncClip.h" />
+		<Unit filename="src/interface/Container.cpp" />
+		<Unit filename="src/interface/Cotnainer.h" />
+		<Unit filename="src/interface/Interface.cpp" />
+		<Unit filename="src/interface/Interface.h" />
+		<Unit filename="src/interface/PictureBox.cpp" />
+		<Unit filename="src/interface/PictureBox.h" />
+		<Unit filename="src/interface/TextBox.cpp" />
+		<Unit filename="src/interface/TextBox.h" />
+		<Unit filename="src/interface/TransBox.cpp" />
+		<Unit filename="src/interface/TransBox.h" />
+		<Unit filename="src/json/json-forwards.h" />
+		<Unit filename="src/json/json.h" />
+		<Unit filename="src/json/jsoncpp.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/media.cpp" />
+		<Unit filename="src/media.h" />
+		<Unit filename="src/moves.cpp" />
+		<Unit filename="src/moves.h" />
+		<Unit filename="src/utils.cpp" />
+		<Unit filename="src/utils.h" />
+		<Unit filename="src/utils/graphics.cpp" />
+		<Unit filename="src/utils/graphics.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

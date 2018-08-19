@@ -1,0 +1,44 @@
+{
+	"name" : "sword man",
+	"description" : "a sword man",
+	"faction" : "friend",
+	"status" : {
+		"max-life" : 10,
+		"life" : 10,
+		"strength" : 1,
+		"toughness" : 2,
+		"agility" : 3,
+		"speed" : 1,
+		"luck" : 5,
+		"smartness" : 6,
+		"intelligence" : 7
+	},
+	"animation" : {
+		"idle" : {
+			"texture" : "stickman",
+			"isLooping" : true,
+			"speed" : 5,
+			"frameRects" : [
+				[0, 0, 64, 64],
+				[64, 0, 64, 64]
+			]
+		},
+		"melee" : {
+			"texture" : "stickman",
+			"isLooping" : false,
+			"speed" : 5,
+			"frameRects" : [
+				[0, 64, 64, 64],
+				[64, 64, 64, 64]
+			]
+		}
+	},
+	"moves" : {
+		"default" : {
+			"name" : "sword swing",
+			"description" : "a sword swing",
+			"animation" : "melee",
+			"action" : "PhysicalAttack"
+		}
+	}
+}

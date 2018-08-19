@@ -1,0 +1,46 @@
+{
+	"dialog" : "I like potatoes when they're good! Do you like 'em, too?",
+	"decisions" : {
+		"hum... yes, I guess..." : {
+			"me too, me too!!! he he he!",
+			"you:ok..."
+		},
+		"well of course I do, old man!" : {
+			"me not old man... you mean guy",
+			"you:sorry...",
+			"he he he!",
+			"you:that's how I like you, old man!",
+			"old man, old man, old man, oooooooooold maaaaaaan!!!",
+			"you:yhei! old man!"
+		},
+		"if they're good how would anybody not like them?" : {
+			"...",
+			"you:you ok?",
+			"...",
+			"you:hello?",
+			"...",
+			".................",
+			"you:Well, the concept must have been too difficult for his mind to b.....",
+			"BAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHH!!!!!!!!!!!",
+			"you:WHAT THE?!?",
+			"POTATOES!!!",
+			"ARE!!!",
+			"GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOD!!!!!",
+			"you:I guess you'll never stop surprising me, old man.",
+			"popopopotatotoestotoespotatotopotatoes....."
+		},
+		"you just said they're good. That means they could not be bad." : {
+			"well, maybe they're good to me, but not to you, dumbass",
+			"you:You could say that, but then again... wait, what did you just call me?",
+			"dumbass!",
+			"you:You say that one more time!",
+			"dumb",
+			"ass",
+			"dumbass, dumbass, dumbass!!",
+			"you:You know what, I'm done talking to you, good bye.",
+			"Goodbye, dumbass.",
+			"you:...",
+			"he he he!"
+		}
+	}
+}
