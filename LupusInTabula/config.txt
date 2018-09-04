@@ -1,54 +1,42 @@
 : MOD Modes :
 
 
+
 : CN City Name :
 
 Cacca City
 
 : RRN Random Role Numbers :
 
+LUPO		3
 CONTADINO	7
 VEGGENTE	2
 GUARDIA		2
-DRUIDO		3
-GUARITORE	3
-PRETE		1
-CACCIATORE	2
-FIGLIO		1
+DRUIDO		1
 KAMIKAZE	1
-VAMPIRO		1
-LUPO		3
+VAMPIRO     1
 
 : PL Player List
 
 Name		Contr	Role		Special
 ------------------------------------------------------------
 :
-chicco		PLAYER	CASO
-dincio		PLAYER	CASO
-daniele     	CPU	CASO
-joe		CPU	CASO    	
-richard		CPU	CASO    	
-jhons		CPU	CASO	
-steve		CPU	CASO
-tina		CPU	CASO   	
-stella		CPU	CASO    	
-roosvelt	CPU	CASO    	
-knuckles	CPU	CASO	
-bones		CPU	CASO	
-atena		CPU	CASO
-milly		CPU	CASO	
-mara		CPU	CASO	
-davide		CPU	CASO    	
-adolfa          CPU     CASO       
-sofi		CPU	CASO
-speakman	CPU	CASO
-mamma		CPU	CASO
-papa'		CPU	CASO
-chrisphillips	CPU	CASO
-ibra		CPU	CASO
-NT&P		CPU	CASO
-hitler		CPU	CASO
-gretapuzza	CPU	CASO
+chicco		  PLAYER	CASO
+dincio		  PLAYER	CASO
+daniele       CPU	CASO  	
+joe		      CPU	CASO
+richard		  CPU	CASO
+jhons		  CPU	CASO
+steve		  CPU	CASO
+feddino		  CPU	CASO
+stocazzone	  CPU	CASO
+haaaaaaaa	  CPU	CASO
+roosvelt      CPU CASO
+atena         CPU CASO
+adolfa        CPU CASO
+sofi          CPU CASO
+john_cena     CPU CASO
+stella        CPU CASO
+chris_philips CPU CASO
 
 : END :

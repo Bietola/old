@@ -294,7 +294,7 @@ bool arrFind(int num,int *arr,int min,int max){
 	for(int j=min;j<=max;j++){
 		if(arr[j]==num) return true;
 	}
-	return false;
+	return false
 }
 void arrCopy(int *from,int *to,int max){
 	for(int j=0;j<max;j++){
